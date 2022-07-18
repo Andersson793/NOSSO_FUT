@@ -1,8 +1,18 @@
+<script setup>
+import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } from 'share-button-links/components/icons';
+</script>
 <template>
     <footer>
         <div class="conteiner">
             <div class="conteiner-share">
                 <p>Compartilhe esta página</p>
+                <div>
+                    <FacebookIcon/>
+                    <WhatsappIcon/>
+                    <TelegramIcon/>
+                    <LinkedInIcon/>
+                    <TwitterIcon/>
+                </div>
             </div>
             <div>Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
         </div>
@@ -48,5 +58,14 @@ footer nav span{
 
 footer .conteiner-licenca{
     margin-top: 20px;
+}
+
+footer .conteiner-share p{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+footer .conteiner-share div{
+    display: inline-flex;
 }
 </style>

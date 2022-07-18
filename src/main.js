@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+import 'share-button-links/main.css';
+
 import App from './App.vue'
 import router from './router'
 
