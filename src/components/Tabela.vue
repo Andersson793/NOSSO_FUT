@@ -99,7 +99,7 @@ h2{
     border: 2px solid #DFDEDE;
     border-radius: 5px;
     padding: 5px;
-    max-width: 100%;
+    max-width: 95vw;
     width: fit-content;
     overflow-x: auto;
 }

@@ -26,8 +26,8 @@ body{
 
 @font-face {
   font-family: Oswald;
-  src:  local("Oswald Light"),
-        local("Oswald-Light"), 
+  src:  local("Oswald"),
+        local("Oswald Light"), 
         url('./Oswald/static/Oswald-Light.ttf');
 }
 </style>
