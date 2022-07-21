@@ -1,5 +1,15 @@
 <script setup>
 import Section from './Section.vue';
+import instance from './axios.config.js';
+
+var rTabela;
+
+instance.get('campeonatos/2/tabela').then(
+    (response) => {
+        rTabela = response.data
+        console.log(rTabela)
+    }
+)
 
 </script>
 <template>
@@ -27,9 +37,9 @@ import Section from './Section.vue';
                     <th>Últ.Jogos</th>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr v-for="item in rTabela">
                         <td>1°</td>
-                        <td>PALMEIRAS</td>
+                        <td>{{item.time.nome_popular}}</td>
                         <td class="bg-cell">28</td>
                         <td>14</td>
                         <td class="bg-cell">5</td>
@@ -46,34 +56,6 @@ import Section from './Section.vue';
                             <i class="b-partidas"></i>
                             <i class="b-partidas"></i>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>1°</td>
-                        <td>Palmeiras</td>
-                        <td class="bg-cell">28</td>
-                        <td>14</td>
-                        <td class="bg-cell">5</td>
-                        <td>67</td>
-                        <td class="bg-cell">4</td>
-                        <td>36</td>
-                        <td class="bg-cell">13</td>
-                        <td>7</td>
-                        <td class="bg-cell">75.2</td>
-                        <td>°°°°°</td>
-                    </tr>
-                    <tr>
-                        <td>1°</td>
-                        <td>Palmeiras</td>
-                        <td class="bg-cell">28</td>
-                        <td>14</td>
-                        <td class="bg-cell">5</td>
-                        <td>67</td>
-                        <td class="bg-cell">4</td>
-                        <td>36</td>
-                        <td class="bg-cell">13</td>
-                        <td>7</td>
-                        <td class="bg-cell">75.2</td>
-                        <td>°°°°°</td>
                     </tr>
                 </tbody>
             </table>
