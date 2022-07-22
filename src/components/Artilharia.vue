@@ -1,6 +1,24 @@
 <script setup>
 import Section from './Section.vue';
 import TitleSections from './TitleSections.vue';
+import instance from './axios.config.js';
+import { onBeforeMount} from 'vue';
+import {reactive} from 'vue';
+
+const state = reactive({
+    isReady: false,
+    artilhariaData: null
+})
+
+onBeforeMount(() => {
+    instance.get('campeonatos/2/artilharia').then(
+        (response) => {
+            state.artilhariaData = response.data
+            console.log(state.artilhariaData)
+        }
+    )
+})
+
 </script>
 <template>
     <Section>
@@ -9,23 +27,11 @@ import TitleSections from './TitleSections.vue';
         </TitleSections>
         <table>
             <tbody>
-                <tr>
-                    <td>1°</td>
-                    <td><img src="../assets/palmeiras-escudo-5.png" height="30"></td>
-                    <td>Gabrial Barbosa</td>
-                    <td>28 Gols</td>
-                </tr>
-                <tr>
-                    <td>2°</td>
-                    <td><img src="../assets/palmeiras-escudo-5.png" height="30"></td>
-                    <td>Hulk</td>
-                    <td>28 Gols</td>
-                </tr>
-                <tr>
-                    <td>3°</td>
-                    <td><img src="../assets/palmeiras-escudo-5.png" height="30"></td>
-                    <td>Gabrial Barbosa</td>
-                    <td>21 Gols</td>
+                <tr v-for="(item,index) in state.artilhariaData">
+                    <td>{{index+1}}°</td>
+                    <td><img :src="item.time.escudo" height="30"></td>
+                    <td>{{item.atleta.nome_popular}}</td>
+                    <td>{{item.gols}} Gols</td>
                 </tr>
             </tbody>
         </table>
@@ -39,7 +45,7 @@ table{
 
 
 table tr{
-    border-top: 2px solid #DFDEDE;
+    border-top: 1px solid #DFDEDE;
 }
 
 tr{
@@ -52,7 +58,7 @@ tbody > tr:hover{
 
 th,td{
     text-align: center;
-    padding: 8px 15px;
+    padding: 10px 15px;
 }
 
 td:nth-child(1),
@@ -61,7 +67,7 @@ td:nth-child(2){
 }
 
 td:nth-child(3){
-    padding-right: 40px;
+    padding-right: 50px;
     text-align: left;
 }
 </style>

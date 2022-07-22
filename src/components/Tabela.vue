@@ -14,7 +14,6 @@ onBeforeMount(() => {
         (response) => {
             state.tabelaData = response.data
             state.isReady = true
-            console.log(state.tabelaData[0])
         }
     )
 })
@@ -50,7 +49,7 @@ console.log(state.tabelaData)
                 <tbody>
                     <tr v-for="item in state.tabelaData">
                         <td>
-                            {{item.posicao}}
+                            {{item.posicao}}°
                         </td>
                         <td>
                             {{item.time.nome_popular}}
@@ -111,9 +110,6 @@ h2{
   text-align: right;
 }
 .tabela{
-/*    border: 2px solid #DFDEDE;
-    border-radius: 5px;
-    padding: 5px;*/
     max-width: 95vw;
     width: fit-content;
     overflow-x: auto;
@@ -125,11 +121,8 @@ table{
 
 .ult_partidas{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    min-height: 40px;
 }
 
 .b-partidas{
@@ -150,7 +143,8 @@ tbody > tr:hover{
 
 th,td{
     text-align: center;
-    padding: 13px 18px;
+    height: 52px;
+    padding: 0 18px;
 }
 
 th:nth-child(1),
