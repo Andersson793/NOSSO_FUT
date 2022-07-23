@@ -10,8 +10,8 @@ const state = reactive({
     artilhariaData: null
 })
 
-onBeforeMount(() => {
-    instance.get('campeonatos/2/artilharia').then(
+onBeforeMount(async() => {
+    await instance.get('campeonatos/2/artilharia').then(
         (response) => {
             state.artilhariaData = response.data
             console.log(state.artilhariaData)
@@ -69,5 +69,9 @@ td:nth-child(2){
 td:nth-child(3){
     padding-right: 50px;
     text-align: left;
+}
+
+td:last-of-type{
+    font-weight:bold;
 }
 </style>

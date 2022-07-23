@@ -31,6 +31,7 @@ footer{
     flex-direction: column;
     text-align: center;
     padding-top: 20px;
+    background-color: #23F918;
 }
 
 footer .conteiner-share{
@@ -51,7 +52,7 @@ footer nav span{
 }
 
 footer .conteiner-licenca{
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 footer .conteiner-share p{
