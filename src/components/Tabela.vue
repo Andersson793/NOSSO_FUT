@@ -148,13 +148,14 @@ th,td{
 
 th:nth-child(1),
 td:nth-child(1){
-    padding-right: 0;
+    padding: 0;
 }
 
 
 th:nth-child(2),
 td:nth-child(2){
     padding-right: 40px;
+    padding-left: 10px;
     text-align: left;
 }
 

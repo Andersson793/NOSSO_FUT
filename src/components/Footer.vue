@@ -7,9 +7,9 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
             <p>Compartilhe esta página</p>
             <div>
                 <FacebookIcon url=""/>
-                <WhatsappIcon/>
                 <TelegramIcon/>
                 <LinkedInIcon/>
+                <WhatsappIcon/>
                 <TwitterIcon/>
             </div>
         </div>
