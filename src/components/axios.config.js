@@ -1,4 +1,5 @@
 import axios from "axios";
+import {ref} from 'vue'
 
 const instance = axios.create({
     baseURL: 'https://api.api-futebol.com.br/v1/',
@@ -7,4 +8,18 @@ const instance = axios.create({
     }
 })
 
-export default instance;
+export default function useGetAPI(url){
+
+    const isReady = ref(false)
+    const hasError = ref(false)
+    const data = ref(null)
+
+    instance.get(url).then((response) =>{
+        data.value = response.data;
+        isReady.value = true;
+    }).catch(() => {
+        hasError.valeu = true;
+    })
+
+    return {isReady,hasError,data}
+}

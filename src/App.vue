@@ -1,14 +1,12 @@
 <script setup>
 import Header from './components/Header.vue';
-import Tabela from './components/Tabela.vue';
-import Artilharia from './components/Artilharia.vue';
 import Footer from './components/Footer.vue';
+import Main from './components/Main.vue';
 </script>
 
 <template>
   <Header/>
-  <Tabela />
-  <Artilharia/>
+  <Main/>
   <Footer/>
 </template>
 
