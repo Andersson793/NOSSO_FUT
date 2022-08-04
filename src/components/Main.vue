@@ -1,6 +1,6 @@
 <script setup>
 import Artilharia from './Brasileirão/Artilharia.vue';
-import Tabela from './Brasileirão/Artilharia.vue';
+import Tabela from './Brasileirão/Tabela.vue';
 
 </script>
 <template>
@@ -11,6 +11,6 @@ import Tabela from './Brasileirão/Artilharia.vue';
 </template>
 <style scoped>
 main{
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 </style>

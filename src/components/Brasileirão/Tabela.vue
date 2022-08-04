@@ -1,7 +1,7 @@
 <script setup>
-import Section from './Section.vue';
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
+import useGetAPI from '../axios.config.js';
 
 const {isReady,hasError,data} = useGetAPI('campeonatos/2/tabela')
 
@@ -14,6 +14,10 @@ function setColor(i){
         return 'gray'
     }
 }
+
+console.log(data)
+console.log(hasError)
+console.log(isReady)
 
 </script>
 <template>
@@ -30,53 +34,57 @@ function setColor(i){
                     <thead>
                         <th title="posição">#</th>
                         <th>Clube</th>
-                        <th title="pontos">Pts</th>
-                        <th title="jogos">J</th>
-                        <th title="vitórias">V</th>
-                        <th title="empates">E</th>
-                        <th title="derrotas">D</th>
-                        <th title="gols pro">GP</th>
-                        <th title="golscontra">GC</th>
-                        <th title="saldo de gols">SG</th>
-                        <th title="aproveitamento">A(%)</th>
-                        <th title="útimos jogos">Últ.Jogos</th>
+                        <th title="Pontos">Pts</th>
+                        <th title="Jogos">J</th>
+                        <th title="Vitórias">V</th>
+                        <th title="Empates">E</th>
+                        <th title="Derrotas">D</th>
+                        <th title="Gols pro">GP</th>
+                        <th title="Gols contra">GC</th>
+                        <th title="Saldo de gols">SG</th>
+                        <th title="Aproveitamento">A(%)</th>
+                        <th title="Últimos jogos">Últ.Jogos</th>
                     </thead>
                     <tbody>
                         <tr v-for="item in data">
-                            <td title="posição">
+                            <td title="Posição">
                                 {{item.posicao}}°
                             </td>
                             <td>
                                 {{item.time.nome_popular}}
                             </td>
-                            <td title="pontos" class="bg-cell">
+                            <td title="Pontos" class="bg-cell">
                                 {{item.pontos}}
                             </td>
-                            <td title="jogos">
+                            <td title="Jogos">
                                 {{item.jogos}}
                             </td>
-                            <td title="vitórias" class="bg-cell">
+                            <td title="Vitórias" class="bg-cell">
                                 {{item.vitorias}}
                             </td>
-                            <td title="empates">
+                            <td title="Empates">
                                 {{item.empates}}
                             </td>
-                            <td title="derrotas" class="bg-cell">
+                            <td title="Derrotas" class="bg-cell">
                                 {{item.derrotas}}
                             </td>
-                            <td title="gols pro">
+                            <td title="Gols pro">
                                 {{item.gols_pro}}
                             </td>
-                            <td title="gols contra" class="bg-cell">
+                            <td title="Gols contra" class="bg-cell">
                                 {{item.gols_contra}}
                             </td>
-                            <td title="saldo de gols">
+                            <td title="Saldo de gols">
                                 {{item.saldo_gols}}
                             </td>
-                            <td title="aproveitamento" class="bg-cell">
+                            <td title="Aproveitamento" class="bg-cell">
                                 {{item.aproveitamento}}
                             </td>
-                            <td v-for="item in item.partidas" title="útimos jogos" class="ult_partidas">
+                            <td title="Útimos jogos" class="ult_partidas">
+                                <i class="b-partidas"></i>
+                                <i class="b-partidas"></i>
+                                <i class="b-partidas"></i>
+                                <i class="b-partidas"></i>
                                 <i class="b-partidas"></i>
                             </td>
                         </tr>
@@ -91,7 +99,6 @@ function setColor(i){
 <style scoped>
 .content{
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 .title-content{
@@ -119,15 +126,18 @@ table{
 }
 
 .ult_partidas{
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    width: 90px;
 }
 
 .b-partidas{
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    background-color: gray;
 }
 
 tr,thead{
@@ -149,7 +159,6 @@ th:nth-child(1),
 td:nth-child(1){
     padding: 0;
 }
-
 
 th:nth-child(2),
 td:nth-child(2){

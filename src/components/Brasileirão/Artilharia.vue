@@ -1,10 +1,12 @@
 <script setup>
 import TitleSections from '../TitleSections.vue';
-import useGetAPI from './axios.config.js';
+import useGetAPI from '../axios.config.js';
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 
-const {isReady,hasError,data} = useGetAPI('/campeonatos/2/artiharia')
+const {isReady,hasError,data} = useGetAPI('/campeonatos/2/artilharia')
+
+console.log(data)
 
 </script>
 <template>
@@ -32,11 +34,11 @@ const {isReady,hasError,data} = useGetAPI('/campeonatos/2/artiharia')
 <style scoped>
 .content{
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
 table{
+    width: fit-content;
     border-collapse:collapse;
 }
 
@@ -58,7 +60,8 @@ th,td{
 }
 
 td:nth-child(1),
-td:nth-child(2){
+td:nth-child(2),
+td:nth-child(4){
     padding-right: 0;
 }
 
