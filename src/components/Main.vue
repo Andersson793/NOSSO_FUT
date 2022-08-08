@@ -11,6 +11,6 @@ import Tabela from './Brasileirão/Tabela.vue';
 </template>
 <style scoped>
 main{
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 </style>

@@ -11,9 +11,9 @@ header{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   padding: 8px 0;
-  background-color: #12F706;
+  background-color: #18DC43;
   box-shadow: 0px 2px 2px rgb(179, 179, 179); 
 }
 

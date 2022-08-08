@@ -20,7 +20,7 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
         </nav>
         <div>Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
         <div class="conteiner-licenca">
-            <p>Site sob licença GLP 3.0</p>
+            <p>NossoFut v0.1.0 Licença GLP 3.0</p>
         </div>
     </footer>
 </template>
@@ -31,7 +31,7 @@ footer{
     flex-direction: column;
     text-align: center;
     padding-top: 20px;
-    background-color: #23F918;
+    background-color: #18DC43;
 }
 
 footer .conteiner-share{

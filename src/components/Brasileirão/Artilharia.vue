@@ -6,7 +6,7 @@ import PreLoader from '../PreLoader.vue';
 
 const {isReady,hasError,data} = useGetAPI('/campeonatos/2/artilharia')
 
-console.log(data)
+console.clear()
 
 </script>
 <template>
@@ -27,7 +27,7 @@ console.log(data)
                 </tbody>
             </table>
             <Error v-else-if="hasError"/>
-            <PreLoader v-else/>
+            <PreLoader v-else Width="310" Height="280"/>
         </div>
     </section>
 </template>

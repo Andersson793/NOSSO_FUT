@@ -6,18 +6,14 @@ import useGetAPI from '../axios.config.js';
 const {isReady,hasError,data} = useGetAPI('campeonatos/2/tabela')
 
 function setColor(i){
-    if(i = 'v'){
+    if(i == 'v'){
         return 'green'
-    }else if(i = 'd'){
+    }else if(i == 'd'){
         return 'red'
     }else{
         return 'gray'
     }
 }
-
-console.log(data)
-console.log(hasError)
-console.log(isReady)
 
 </script>
 <template>
@@ -81,18 +77,14 @@ console.log(isReady)
                                 {{item.aproveitamento}}
                             </td>
                             <td title="Útimos jogos" class="ult_partidas">
-                                <i class="b-partidas"></i>
-                                <i class="b-partidas"></i>
-                                <i class="b-partidas"></i>
-                                <i class="b-partidas"></i>
-                                <i class="b-partidas"></i>
+                                <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:setColor(item)}" class="b-partidas"></i>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <Error v-else-if="hasError"/>
-            <PreLoader width="300px" height="500px" v-else/>
+            <PreLoader v-else Width="650" Height="1000"/>
         </div>
     </section>
 </template>
@@ -104,7 +96,7 @@ console.log(isReady)
 .title-content{
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 h1{
@@ -137,7 +129,6 @@ table{
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: gray;
 }
 
 tr,thead{

@@ -11,7 +11,7 @@
 .title-section{
     display: flex;
     justify-content: center;
-    margin: 50px 0;
+    margin: 70px 0;
 }
 
 h3{
