@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="652.2738mm"
+   height="162.51091mm"
+   viewBox="0 0 652.2738 162.51091"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="logo_transparente.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.074331524"
+     inkscape:cx="-1728.7416"
+     inkscape:cy="-1722.015"
+     inkscape:window-width="1440"
+     inkscape:window-height="831"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-346.76226,1104.5751)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:153.406px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#000000;stroke-width:0.264583"
+       x="466.04474"
+       y="-1725.97"
+       id="text392"><tspan
+         sodipodi:role="line"
+         id="tspan390"
+         style="stroke-width:0.264583"
+         x="466.04474"
+         y="-1725.97">Modelos de Logos</tspan></text>
+    <g
+       id="g267"
+       transform="translate(-3890.3682,-629.03418)"
+       style="fill:#ff6600">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.257486"
+         x="3037.9731"
+         y="-882.00171"
+         id="text428"><tspan
+           sodipodi:role="line"
+           id="tspan426"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.257486"
+           x="3037.9731"
+           y="-882.00171">NOSSO FUT</tspan></text>
+      <g
+         id="g260"
+         transform="translate(-7.730167)"
+         style="fill:#ff6600">
+        <rect
+           style="font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.626077"
+           id="rect430"
+           width="652.2738"
+           height="18.791082"
+           x="3055.4072"
+           y="-860.25262" />
+        <circle
+           style="font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.264583"
+           id="path240"
+           cx="3688.792"
+           cy="-899.54706"
+           r="18.889008" />
+      </g>
+    </g>
+    <g
+       id="g291"
+       transform="translate(-2700.9148,-100.60264)"
+       style="opacity:0.8;fill:#ffffff">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.257486"
+         x="3037.9731"
+         y="-882.00171"
+         id="text283"><tspan
+           sodipodi:role="line"
+           id="tspan281"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.257486"
+           x="3037.9731"
+           y="-882.00171">NOSSO FUT</tspan></text>
+      <g
+         id="g289"
+         transform="translate(-7.730167)"
+         style="fill:#ffffff">
+        <rect
+           style="font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.626077"
+           id="rect285"
+           width="652.2738"
+           height="18.791082"
+           x="3055.4072"
+           y="-860.25262" />
+        <circle
+           style="font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.264583"
+           id="circle287"
+           cx="3688.792"
+           cy="-899.54706"
+           r="18.889008" />
+      </g>
+    </g>
+  </g>
+</svg>
