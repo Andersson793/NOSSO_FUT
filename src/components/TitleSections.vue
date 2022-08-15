@@ -1,4 +1,5 @@
 <template>
+    <!--este componente define um título de seção-->
     <div class="title-section">
         <div>
             <h3>
@@ -11,7 +12,8 @@
 .title-section{
     display: flex;
     justify-content: center;
-    margin: 70px 0;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 h3{

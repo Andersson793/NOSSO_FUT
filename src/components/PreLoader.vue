@@ -1,9 +1,9 @@
 <script>
-
+//define as propriedades de largura e alturado pre-loader
 export default {
   props: {
-    Height: Number,
-    Width: Number
+    Height: String,
+    Width: String
   }
 }
 

@@ -1,35 +1,23 @@
-# meu_fut
+# NOSSO FUT
 
-This template should help get you started developing with Vue 3 in Vite.
+Um site que acompanha os principais campeonatos do brasil e do mundo.
 
-## Recommended IDE Setup
+## Bibliotecas  utilizadas
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[Axios](https://axios-http.com/)
 
-## Customize configuration
+[Vue3](https://vuejs.org/)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## API
 
-## Project Setup
+[API futebol](https://www.api-futebol.com.br/)
 
-```sh
-npm install
-```
+Esta API fornece todos os dados consumidos no site
 
-### Compile and Hot-Reload for Development
+## Deploy from netlify
 
-```sh
-npm run dev
-```
+> status: em desenvolvimento
 
-### Compile and Minify for Production
+Viu algo que pode ser melhorado ou corrigido ? Abra uma inssure ou faça um pull request
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Licenca 

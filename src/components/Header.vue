@@ -1,8 +1,10 @@
 <template>
     <header>
-      <p>LOGO</p>
-      <a href="">
-        <img src="../assets/github.png" alt="GitHub" height="40">
+      <a href="https://nossofut.com/">
+        <img src="../assets/logo.svg" alt="NOSSO FUT" height="30">
+      </a>
+      <a href="https://github.com/Andersson793/nosso_fut">
+        <img src="../assets/github.png" alt="GitHub" height="35">
       </a>
     </header>
 </template>
@@ -12,8 +14,8 @@ header{
   justify-content: space-around;
   align-items: center;
   margin-bottom: 70px;
-  padding: 8px 0;
-  background-color: #18DC43;
+  padding: 9px 0 7px 0;
+  background-color: #37F25F;
   box-shadow: 0px 2px 2px rgb(179, 179, 179); 
 }
 

@@ -3,24 +3,26 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
 </script>
 <template>
     <footer>
+        <a href="https://nossofut.com/">
+            <img src="../assets/logo_transparente.svg" alt="NOSSO FUT" height="30">
+        </a>
+        
         <div class="conteiner-share">
             <p>Compartilhe esta página</p>
             <div>
-                <FacebookIcon url=""/>
-                <TelegramIcon/>
-                <LinkedInIcon/>
-                <WhatsappIcon/>
-                <TwitterIcon/>
+                <FacebookIcon url="https://nossofut.com/"/>
+                <TelegramIcon url="https://nossofut.com/"/>
+                <LinkedInIcon url="https://nossofut.com/"/>
+                <WhatsappIcon messase="acompanhe a tabela e artilharia do campeonato brasileiro 2022" url="https://nossofut.com/"/>
+                <TwitterIcon title="acompanhe a tabela e artilharia do campeonato brasileiro 2022" url="https://nossofut.com/"/>
             </div>
         </div>
-        <nav>
-            <a href="">Termos de uso</a>
-            <span>|</span>
-            <a href="">Privaciade</a>
-        </nav>
-        <div>Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+        <p class="privacy">Este site não coleta suas informações pessoais.</p>
+        <div class="contact">
+            <p>Feito por <a href="https://github.com/Andersson793">Andersson Gonçalves</a></p>
+        </div>
         <div class="conteiner-licenca">
-            <p>NossoFut v0.1.0 Licença GLP 3.0</p>
+            <p>NOSSO FUT v-0.1.0 Licença GLP 3.0</p>
         </div>
     </footer>
 </template>
@@ -31,28 +33,36 @@ footer{
     flex-direction: column;
     text-align: center;
     padding-top: 20px;
-    background-color: #18DC43;
+    background-color: #37F25F;
 }
 
-footer .conteiner-share{
+img{
+    margin-bottom: 20px;
+}
+
+.contact{
+    margin-bottom: 15px;
+}
+
+
+
+.privacy{
+    margin-bottom: 30px;
+}
+
+.conteiner-share{
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-footer .conteiner-share div{
+.conteiner-share div{
     display: inline-flex;
 }
 
-footer nav{
-    margin-bottom: 35px;
-}
-
-footer nav span{
-    margin: 0 10px;
-}
 
 footer .conteiner-licenca{
-    margin: 10px 0;
+    background-color: #0000001c;
+    padding: 8px 0;
 }
 
 footer .conteiner-share p{

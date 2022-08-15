@@ -6,8 +6,6 @@ import PreLoader from '../PreLoader.vue';
 
 const {isReady,hasError,data} = useGetAPI('/campeonatos/2/artilharia')
 
-console.clear()
-
 </script>
 <template>
     <section>
