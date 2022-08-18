@@ -20,4 +20,4 @@ Esta API fornece todos os dados consumidos no site
 
 Viu algo que pode ser melhorado ou corrigido ? Abra uma inssure ou faça um pull request
 
-Licenca 
+Licenca GPL-3.0
