@@ -3,6 +3,7 @@
       <a href="https://nossofut.com/">
         <img src="../assets/logo.svg" alt="NOSSO FUT" height="30">
       </a>
+
       <a href="https://github.com/Andersson793/nosso_fut">
         <img src="../assets/github.png" alt="GitHub" height="35">
       </a>
