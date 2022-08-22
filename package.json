@@ -1,6 +1,10 @@
 {
   "name": "nosso_fut",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "author": {
+    "name": "Andersson S. Gonçalves",
+    "email": "anderssonsilva793@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

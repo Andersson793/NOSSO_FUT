@@ -19,10 +19,10 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
         </div>
         <p class="privacy">Este site não coleta suas informações pessoais.</p>
         <div class="contact">
-            <p>Feito por <a href="https://github.com/Andersson793">Andersson Gonçalves</a></p>
+            <small>Por <a href="https://github.com/Andersson793">Andersson Gonçalves</a></small>
         </div>
         <div class="conteiner-licenca">
-            <p>NOSSO FUT v-0.1.0 Licença GLP 3.0</p>
+            <p>NOSSO FUT v-0.1.0</p>
         </div>
     </footer>
 </template>

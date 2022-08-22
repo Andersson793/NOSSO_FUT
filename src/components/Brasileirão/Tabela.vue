@@ -26,6 +26,11 @@ function setColor(i){
         </div>
         <div class="content">
             <div class="table" v-if="isReady">
+                <select id="select" name="campeonatos">
+                    <option value="">Serie A</option>
+                    <option disabled value="">Serie B</option>
+                    <option disabled value="">Serie C</option>
+                </select>
                 <table>
                     <thead>
                         <th title="posição">#</th>
@@ -74,7 +79,7 @@ function setColor(i){
                                 {{item.saldo_gols}}
                             </td>
                             <td title="Aproveitamento" class="bg-cell">
-                                {{item.aproveitamento}}
+                                {{item.aproveitamento.toFixed(0)}}
                             </td>
                             <td title="Útimos jogos" class="ult_partidas">
                                 <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:setColor(item)}" class="b-partidas"></i>
@@ -82,11 +87,20 @@ function setColor(i){
                         </tr>
                     </tbody>
                 </table>
+                <div class="info">
+                    <i class="info-color" style="background-color: #008000;"></i>
+                    <small>Libertadores</small>
+                    <i class="info-color" style="background-color: #ffa500;"></i>
+                    <small>Sul-americana</small>
+                    <i class="info-color" style="background-color: #ff0000;"></i>
+                    <small>Rebaixamento</small>
+                </div>
             </div>
             <Error v-else-if="hasError"/>
             <PreLoader v-else Width="650" Height="1000"/>
         </div>
     </section>
+    
 </template>
 <style scoped>
 .content{
@@ -104,25 +118,37 @@ h1{
   color: #0ac500;
 }
 
-h2{
-  text-align: right;
-}
 .table{
     max-width: 95vw;
     width: fit-content;
     overflow-x: auto;
 }
 
-table{
-    border-collapse:collapse;
+#select{
+    margin-bottom: 20px;
+    padding: 5px 8px;
+    background-color: white;
+    border: 1px solid gray;
 }
 
-.ult_partidas{
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 52px;
-    width: 90px;
+tbody tr:nth-last-child(-n+4) td:first-of-type{
+    color: #ff0000;
+}
+
+tbody tr:nth-child(-n+12) td:first-of-type{
+    color: #ffa500;
+}
+
+tbody tr:nth-child(-n+6) td:first-of-type{
+    color: #008000;
+}
+
+h2{
+  text-align: right;
+}
+
+table{
+    border-collapse:collapse;
 }
 
 .b-partidas{
@@ -146,6 +172,14 @@ th,td{
     padding: 0 18px;
 }
 
+.ult_partidas{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    width: 90px;
+}
+
 th:nth-child(1),
 td:nth-child(1){
     padding: 0;
@@ -164,5 +198,25 @@ td:nth-child(3){
 
 .bg-cell{
     background-color: #0000000e;
+}
+
+.info{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+
+}
+
+.info-color:first-of-type{
+    margin-left: 0;
+}
+
+.info-color{
+    background-color: #ff0000;
+    height: 10px;
+    width: 10px;
+    border-radius: 2px;
+    margin-right: 12px;
+    margin-left: 25px;
 }
 </style>
