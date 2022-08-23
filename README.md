@@ -16,7 +16,7 @@ Esta API fornece todos os dados consumidos no site
 
 ## Deploy from netlify
 
-> status: em desenvolvimento
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70e353b0-9983-4c9d-ab86-6e9f9148a18e/deploy-status)](https://app.netlify.com/sites/nossofut/deploys)
 
 Viu algo que pode ser melhorado ou corrigido ? Abra uma inssure ou faça um pull request
 
