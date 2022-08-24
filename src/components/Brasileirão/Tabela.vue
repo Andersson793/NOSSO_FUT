@@ -21,15 +21,15 @@ function setColor(i){
         <div class="title-content">
             <div>
                 <h1>Tabela Brasileirão</h1>
-                <h2>Serie A - 2022</h2>
+                <h2>Série A - 2022</h2>
             </div>
         </div>
         <div class="content">
             <div class="table" v-if="isReady">
                 <select id="select" name="campeonatos">
-                    <option value="">Serie A</option>
-                    <option disabled value="">Serie B</option>
-                    <option disabled value="">Serie C</option>
+                    <option value="">Série A</option>
+                    <option disabled value="">Série B</option>
+                    <option disabled value="">Série C</option>
                 </select>
                 <table>
                     <thead>
