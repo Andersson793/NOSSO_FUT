@@ -4,7 +4,7 @@ import useGetAPI from '../axios.config.js';
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 
-const {isReady,hasError,data} = useGetAPI('/campeonatos/2/artilharia')
+const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia')
 
 </script>
 <template>

@@ -3,7 +3,7 @@ import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 import useGetAPI from '../axios.config.js';
 
-const {isReady,hasError,data} = useGetAPI('campeonatos/2/tabela')
+const {isReady,hasError,data} = useGetAPI('campeonatos/10/tabela')
 
 function setColor(i){
     if(i == 'v'){
