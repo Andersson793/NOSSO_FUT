@@ -23,7 +23,7 @@ export default function useGetAPI(url){
         isReady.value = true;
     }).catch((err) => {
         hasError.value = true;
-        console.log(err)
+        console.log(err.request.response)
     })
 
     return {isReady,hasError,data}
