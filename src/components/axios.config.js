@@ -12,7 +12,7 @@ const instance = axios.create({
     }
 })
 
-export default function useGetAPI(url){
+export default function useGetAPI(url,component){
 
     const isReady = ref(false)
     const hasError = ref(false)
@@ -23,7 +23,7 @@ export default function useGetAPI(url){
         isReady.value = true;
     }).catch((err) => {
         hasError.value = true;
-        console.log(err.request.response)
+        console.log(component+':'+err.request.response)
     })
 
     return {isReady,hasError,data}
