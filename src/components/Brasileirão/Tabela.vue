@@ -2,8 +2,13 @@
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 import useGetAPI from '../axios.config.js';
+import {ref } from 'vue';
 
 const {isReady,hasError,data} = useGetAPI('campeonatos/10/tabela','Tabela')
+
+const isSmallDevice = ref(false);
+
+if(window.innerWidth <= 400){isSmallDevice.value =  true}
 
 function setColor(i){
     if(i == 'v'){
@@ -25,12 +30,12 @@ function setColor(i){
             </div>
         </div>
         <div class="content">
-            <div class="table" v-if="isReady">
-                <select id="select" name="campeonatos">
-                    <option value="">Série A</option>
-                    <option disabled value="">Série B</option>
-                    <option disabled value="">Série C</option>
-                </select>
+            <select id="select" name="campeonatos">
+                <option value="">Série A</option>
+                <option disabled value="">Série B</option>
+                <option disabled value="">Série C</option>
+            </select>
+            <div class="tabela" v-if="isReady">
                 <table>
                     <thead>
                         <th title="posição">#</th>
@@ -40,8 +45,8 @@ function setColor(i){
                         <th title="Vitórias">V</th>
                         <th title="Empates">E</th>
                         <th title="Derrotas">D</th>
-                        <th title="Gols pro">GP</th>
-                        <th title="Gols contra">GC</th>
+                        <th title="Gols pro" :class="{hidden:isSmallDevice}">GP</th>
+                        <th title="Gols contra" :class="{hidden:isSmallDevice}">GC</th>
                         <th title="Saldo de gols">SG</th>
                         <th title="Aproveitamento">A(%)</th>
                         <th title="Últimos jogos">Últ.Jogos</th>
@@ -52,7 +57,10 @@ function setColor(i){
                                 {{item.posicao}}°
                             </td>
                             <td>
-                                {{item.time.nome_popular}}
+                                <div>
+                                    {{item.time.nome_popular}}
+                                </div>
+                                
                             </td>
                             <td title="Pontos" class="bg-cell">
                                 {{item.pontos}}
@@ -69,10 +77,10 @@ function setColor(i){
                             <td title="Derrotas" class="bg-cell">
                                 {{item.derrotas}}
                             </td>
-                            <td title="Gols pro">
+                            <td title="Gols pro" :class="{hidden:isSmallDevice}">
                                 {{item.gols_pro}}
                             </td>
-                            <td title="Gols contra" class="bg-cell">
+                            <td title="Gols contra" class="bg-cell" :class="{hidden:isSmallDevice}">
                                 {{item.gols_contra}}
                             </td>
                             <td title="Saldo de gols">
@@ -87,25 +95,24 @@ function setColor(i){
                         </tr>
                     </tbody>
                 </table>
-                <div class="info">
-                    <i class="info-color" style="background-color: #008000;"></i>
-                    <small>Libertadores</small>
-                    <i class="info-color" style="background-color: #ffa500;"></i>
-                    <small>Sul-americana</small>
-                    <i class="info-color" style="background-color: #ff0000;"></i>
-                    <small>Rebaixamento</small>
-                </div>
             </div>
             <Error v-else-if="hasError"/>
             <PreLoader v-else Width="650" Height="1000"/>
+            <div v-show="isReady" class="info">
+                <i class="info-color" style="background-color: #008000;"></i>
+                <small>Libertadores</small>
+                <i class="info-color" style="background-color: #ffa500;"></i>
+                <small>Sul-americana</small>
+                <i class="info-color" style="background-color: #ff0000;"></i>
+                <small>Rebaixamento</small>
+            </div>
         </div>
     </section>
     
 </template>
 <style scoped>
 .content{
-    display: flex;
-    justify-content: center;
+    padding: 0 10px;
 }
 .title-content{
     display: flex;
@@ -118,8 +125,8 @@ h1{
   color: #0ac500;
 }
 
-.table{
-    max-width: 95vw;
+.tabela{
+    max-width: 100%;
     width: fit-content;
     overflow-x: auto;
 }
@@ -149,6 +156,7 @@ h2{
 
 table{
     border-collapse:collapse;
+    max-width: 200px;
 }
 
 .b-partidas{
@@ -158,8 +166,8 @@ table{
 }
 
 tr,thead{
-    border-top: 1px solid #DFDEDE;
     cursor: pointer;
+    border-top: 1px solid #DFDEDE;
 }
 
 tbody > tr:hover{
@@ -167,8 +175,8 @@ tbody > tr:hover{
 }
 
 th,td{
-    text-align: center;
     height: 52px;
+    text-align: center;
     padding: 0 18px;
 }
 
@@ -190,10 +198,11 @@ td:nth-child(2){
     padding-right: 40px;
     padding-left: 10px;
     text-align: left;
+    margin: 1px 0;
 }
 
-td:nth-child(3){
-    font-weight:bold;
+.hidden{
+    display: none;
 }
 
 .bg-cell{
@@ -204,7 +213,6 @@ td:nth-child(3){
     margin-top: 25px;
     display: flex;
     align-items: center;
-
 }
 
 .info-color:first-of-type{
@@ -212,7 +220,6 @@ td:nth-child(3){
 }
 
 .info-color{
-    background-color: #ff0000;
     height: 10px;
     width: 10px;
     border-radius: 2px;
