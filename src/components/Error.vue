@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>Ops, pareçe que houve um erro</p>
-        <a href="https://github.com/Andersson793/NOSSO_FUT">>tente novamente</a>
+        <a href="https://nossofut.com/">>tente novamente</a>
     </div>
 </template>
 <style scoped>
