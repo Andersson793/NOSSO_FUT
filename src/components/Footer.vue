@@ -3,7 +3,7 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
 </script>
 <template>
     <footer>
-        <a href="https://nossofut.com/">
+        <a href="https://github.com/Andersson793/NOSSO_FUT">
             <img src="../assets/logo_transparente.svg" alt="NOSSO FUT" height="30">
         </a>
         
