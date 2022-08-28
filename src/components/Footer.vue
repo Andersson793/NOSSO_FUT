@@ -17,7 +17,7 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
                 <TwitterIcon title="acompanhe a tabela e artilharia do campeonato brasileiro 2022" url="https://nossofut.com/"/>
             </div>
         </div>
-        <p class="privacy">Este site não coleta suas informações pessoais.</p>
+        <span class="privacy">Coletamos alguns dados para o monitoramento de tráfego.</span>
         <div class="contact">
             <small>Por <a href="https://github.com/Andersson793">Andersson Gonçalves</a></small>
         </div>
@@ -43,8 +43,6 @@ img{
 .contact{
     margin-bottom: 15px;
 }
-
-
 
 .privacy{
     margin-bottom: 30px;

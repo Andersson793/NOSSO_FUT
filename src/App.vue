@@ -21,11 +21,11 @@ body{
   font-family: Oswald;
 }
 
-
 @font-face {
   font-family: Oswald;
-  src:  local("Oswald-ExtraLight"),
-        local("Oswald ExtraLight"), 
-        url('./Oswald/static/Oswald-ExtraLight.ttf');
+  src:  local("Oswald-Light"),
+        local("Oswald Light"),
+        url('./Oswald/static/Oswald-Light.ttf');
+  font-weight: 800;
 }
 </style>

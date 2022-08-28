@@ -49,7 +49,7 @@ function setColor(i){
                             <th title="Gols pro" :class="{hidden:isSmallDevice}">GP</th>
                             <th title="Gols contra" :class="{hidden:isSmallDevice}">GC</th>
                             <th title="Saldo de gols">SG</th>
-                            <th title="Aproveitamento">A(%)</th>
+                            <th title="Aproveitamento">Apr.</th>
                             <th title="Últimos jogos">Últ.Jogos</th>
                         </thead>
                         <tbody>
@@ -85,7 +85,7 @@ function setColor(i){
                                     {{item.saldo_gols}}
                                 </td>
                                 <td title="Aproveitamento" class="bg-cell">
-                                    {{item.aproveitamento.toFixed(0)}}
+                                    {{item.aproveitamento.toFixed(0)}}%
                                 </td>
                                 <td title="Útimos jogos" class="ult_partidas">
                                     <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:setColor(item)}" class="b-partidas"></i>
@@ -114,12 +114,10 @@ function setColor(i){
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
 }
 
 .content div{
     width: fit-content;
-    padding: 0 10px;
 }
 
 .title-content{
@@ -134,14 +132,13 @@ h1{
 }
 
 .tabela{
-    max-width: 100vw;
+    max-width: 95vw;
     width: fit-content;
     overflow-x: auto;
 }
 
 #select{
     width: fit-content;
-    margin-left: 10px;
     margin-bottom: 20px;
     padding: 5px 8px;
     background-color: white;

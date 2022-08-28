@@ -1,123 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="652.2738mm"
-   height="162.51091mm"
-   viewBox="0 0 652.2738 162.51091"
-   version="1.1"
-   id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="logo_transparente.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.074331524"
-     inkscape:cx="-1728.7416"
-     inkscape:cy="-1722.015"
-     inkscape:window-width="1440"
-     inkscape:window-height="831"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs2" />
-  <g
-     inkscape:label="Camada 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-346.76226,1104.5751)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:153.406px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#000000;stroke-width:0.264583"
-       x="466.04474"
-       y="-1725.97"
-       id="text392"><tspan
-         sodipodi:role="line"
-         id="tspan390"
-         style="stroke-width:0.264583"
-         x="466.04474"
-         y="-1725.97">Modelos de Logos</tspan></text>
-    <g
-       id="g267"
-       transform="translate(-3890.3682,-629.03418)"
-       style="fill:#ff6600">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.257486"
-         x="3037.9731"
-         y="-882.00171"
-         id="text428"><tspan
-           sodipodi:role="line"
-           id="tspan426"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.257486"
-           x="3037.9731"
-           y="-882.00171">NOSSO FUT</tspan></text>
-      <g
-         id="g260"
-         transform="translate(-7.730167)"
-         style="fill:#ff6600">
-        <rect
-           style="font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.626077"
-           id="rect430"
-           width="652.2738"
-           height="18.791082"
-           x="3055.4072"
-           y="-860.25262" />
-        <circle
-           style="font-variation-settings:'wght' 373;fill:#ff6600;stroke-width:0.264583"
-           id="path240"
-           cx="3688.792"
-           cy="-899.54706"
-           r="18.889008" />
-      </g>
-    </g>
-    <g
-       id="g291"
-       transform="translate(-2700.9148,-100.60264)"
-       style="opacity:0.8;fill:#ffffff">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.257486"
-         x="3037.9731"
-         y="-882.00171"
-         id="text283"><tspan
-           sodipodi:role="line"
-           id="tspan281"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:149.291px;font-family:Oswald;-inkscape-font-specification:'Oswald, @wght=373';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.257486"
-           x="3037.9731"
-           y="-882.00171">NOSSO FUT</tspan></text>
-      <g
-         id="g289"
-         transform="translate(-7.730167)"
-         style="fill:#ffffff">
-        <rect
-           style="font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.626077"
-           id="rect285"
-           width="652.2738"
-           height="18.791082"
-           x="3055.4072"
-           y="-860.25262" />
-        <circle
-           style="font-variation-settings:'wght' 373;fill:#ffffff;stroke-width:0.264583"
-           id="circle287"
-           cx="3688.792"
-           cy="-899.54706"
-           r="18.889008" />
-      </g>
-    </g>
+<svg width="600mm" height="150mm" version="1.1" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-346.76 1104.6)">
+  <text x="466.04474" y="-1725.97" fill="#000000" font-family="Oswald" font-size="153.41px" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 373" xml:space="preserve"><tspan x="466.04474" y="-1725.97" stroke-width=".26458">Modelos de Logos</tspan></text>
+  <g transform="translate(-3890.4 -629.03)">
+   <text x="3037.9731" y="-882.00171" fill="#ff6600" font-family="Oswald" font-size="149.29px" stroke-width=".25749" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 373" xml:space="preserve"><tspan x="3037.9731" y="-882.00171" fill="#ff6600" font-family="Oswald" font-size="149.29px" stroke-width=".25749" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 373">NOSSO FUT</tspan></text>
+   <g transform="translate(-7.7302)" fill="#f60">
+    <rect x="3055.4" y="-860.25" width="652.27" height="18.791" stroke-width=".62608" style="font-variation-settings:'wght' 373"/>
+    <circle cx="3688.8" cy="-899.55" r="18.889" stroke-width=".26458" style="font-variation-settings:'wght' 373"/>
+   </g>
   </g>
+  <g transform="matrix(.91986 0 0 .92301 -2456.7 -177.89)" fill="#fff" opacity=".8">
+   <g stroke-width=".25749" style="font-variation-settings:'wght' 373" aria-label="NOSSO FUT">
+    <path d="m3047.7-882v-120.93h10.6l35.531 84.051v-84.051h12.839v120.93h-10.002l-35.83-85.842v85.842z"/>
+    <path d="m3156.5-880.66q-12.242 0-19.408-4.628-7.1659-4.7773-10.152-13.585-2.9858-8.8082-2.9858-20.453v-47.027q0-11.645 3.1351-20.154t10.152-12.988q7.166-4.4788 19.259-4.4788 12.092 0 19.109 4.6281 7.166 4.4787 10.152 12.988 3.1351 8.3603 3.1351 20.005v47.176q0 11.495-3.1351 20.304-2.9858 8.6589-10.152 13.436-7.0167 4.7773-19.109 4.7773zm0-12.093q7.0166 0 10.6-2.8365 3.7323-2.9858 4.9266-8.0617 1.3436-5.2252 1.3436-12.242v-53.446q0-7.0167-1.3436-12.093-1.1943-5.0759-4.9266-7.7631-3.583-2.8365-10.6-2.8365-7.0167 0-10.749 2.8365-3.7323 2.6872-5.0759 7.7631-1.1943 5.0759-1.1943 12.093v53.446q0 7.0167 1.1943 12.242 1.3436 5.0759 5.0759 8.0617 3.7323 2.8365 10.749 2.8365z"/>
+    <path d="m3233.8-880.66q-10.301 0-17.168-4.3294-6.7181-4.3294-10.301-12.093-3.4337-7.7631-4.0308-18.064l13.585-3.7323q0.4479 6.5688 2.0901 12.69 1.7915 5.9716 5.5238 9.7039 3.7323 3.7323 10.301 3.7323 7.0166 0 10.6-3.7323 3.7323-3.8816 3.7323-11.346 0-8.211-3.8816-13.436-3.7322-5.2252-9.7039-10.749l-20.602-18.512q-5.8224-5.3745-8.6589-11.346-2.8365-6.1209-2.8365-14.78 0-12.988 7.6138-20.154 7.6138-7.166 20.453-7.166 7.0166 0 12.391 1.7915t8.9575 5.6731q3.7323 3.7323 5.8223 9.7039 2.2394 5.8224 2.9858 13.884l-13.138 3.4337q-0.4478-6.4195-1.9407-11.495-1.493-5.0759-5.0759-8.0617-3.4337-3.1351-10.002-3.1351t-10.45 3.583q-3.7323 3.4337-3.7323 10.45 0 5.3745 1.7915 9.1068 1.9408 3.7323 6.2702 7.6138l20.602 18.661q7.0167 6.1209 12.242 14.481 5.2251 8.211 5.2251 19.259 0 8.9575-3.7322 15.377-3.583 6.4195-10.152 9.7039-6.4195 3.2844-14.78 3.2844z"/>
+    <path d="m3303.9-880.66q-10.301 0-17.168-4.3294-6.7181-4.3294-10.301-12.093-3.4337-7.7631-4.0309-18.064l13.586-3.7323q0.4479 6.5688 2.0901 12.69 1.7915 5.9716 5.5237 9.7039 3.7323 3.7323 10.301 3.7323 7.0167 0 10.6-3.7323 3.7323-3.8816 3.7323-11.346 0-8.211-3.8816-13.436-3.7323-5.2252-9.7039-10.749l-20.602-18.512q-5.8223-5.3745-8.6589-11.346-2.8365-6.1209-2.8365-14.78 0-12.988 7.6139-20.154 7.6138-7.166 20.453-7.166 7.0167 0 12.391 1.7915t8.9574 5.6731q3.7323 3.7323 5.8224 9.7039 2.2393 5.8224 2.9858 13.884l-13.138 3.4337q-0.4479-6.4195-1.9408-11.495-1.4929-5.0759-5.0759-8.0617-3.4337-3.1351-10.002-3.1351t-10.45 3.583q-3.7323 3.4337-3.7323 10.45 0 5.3745 1.7915 9.1068 1.9408 3.7323 6.2702 7.6138l20.602 18.661q7.0167 6.1209 12.242 14.481 5.2252 8.211 5.2252 19.259 0 8.9575-3.7323 15.377-3.583 6.4195-10.152 9.7039-6.4195 3.2844-14.78 3.2844z"/>
+    <path d="m3376.4-880.66q-12.242 0-19.408-4.628-7.166-4.7773-10.152-13.585t-2.9858-20.453v-47.027q0-11.645 3.1351-20.154t10.152-12.988q7.166-4.4788 19.258-4.4788 12.093 0 19.109 4.6281 7.1659 4.4787 10.152 12.988 3.1351 8.3603 3.1351 20.005v47.176q0 11.495-3.1351 20.304-2.9859 8.6589-10.152 13.436-7.0167 4.7773-19.109 4.7773zm0-12.093q7.0167 0 10.6-2.8365 3.7323-2.9858 4.9266-8.0617 1.3436-5.2252 1.3436-12.242v-53.446q0-7.0167-1.3436-12.093-1.1943-5.0759-4.9266-7.7631-3.583-2.8365-10.6-2.8365-7.0166 0-10.749 2.8365-3.7323 2.6872-5.0759 7.7631-1.1943 5.0759-1.1943 12.093v53.446q0 7.0167 1.1943 12.242 1.3436 5.0759 5.0759 8.0617 3.7323 2.8365 10.749 2.8365z"/>
+    <path d="m3459.1-882v-120.93h45.832v11.197h-30.455v41.652h24.185v11.048h-24.185v57.029z"/>
+    <path d="m3548.1-880.66q-12.839 0-19.856-4.9266-6.8674-5.0759-9.4053-14.033-2.538-9.1068-2.538-21.05v-82.259h14.63v82.856q0 7.6138 1.1944 13.884 1.1943 6.1209 4.9266 9.8532 3.7322 3.583 11.048 3.583 7.3152 0 11.048-3.583 3.7323-3.7323 4.9266-9.8532 1.1944-6.2702 1.1944-13.884v-82.856h14.63v82.259q0 11.943-2.6873 21.05-2.5379 8.9575-9.4053 14.033-6.8674 4.9266-19.706 4.9266z"/>
+    <path d="m3611.8-882v-109.43h-21.05v-11.495h56.88v11.495h-20.453v109.43z"/>
+   </g>
+   <g transform="translate(-7.7302)" fill="#fff">
+    <path d="m3055.4-860.25h652.27v18.791h-652.27z" stroke-width=".62608" style="font-variation-settings:'wght' 373"/>
+    <path d="m3707.7-899.55a18.889 18.889 0 0 1-18.889 18.889 18.889 18.889 0 0 1-18.889-18.889 18.889 18.889 0 0 1 18.889-18.889 18.889 18.889 0 0 1 18.889 18.889z" stroke-width=".26458" style="font-variation-settings:'wght' 373"/>
+   </g>
+  </g>
+ </g>
 </svg>
