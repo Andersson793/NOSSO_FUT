@@ -15,7 +15,7 @@ const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia','Artilhar
         <div class="content">
             <table v-if="isReady">
                 <tbody>
-                    <tr v-for="(item,index) in data">
+                    <tr v-for="(item,index) in data.slice(0,5)">
                         <td>{{index+1}}°</td>
                         <td><img :src="item.time.escudo" height="30"></td>
                         <td>{{item.atleta.nome_popular}}</td>
