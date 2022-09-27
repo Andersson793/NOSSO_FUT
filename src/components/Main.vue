@@ -1,11 +1,11 @@
 <script setup>
 import Artilharia from './Brasileirão/Artilharia.vue';
 import Tabela from './Brasileirão/Tabela.vue';
+import Brasileirao from './Brasileirão/Brasileirao.vue';
 </script>
 <template>
     <main>
-        <Tabela/>
-        <Artilharia/>
+        <Brasileirao/>
     </main>
 </template>
 <style scoped>

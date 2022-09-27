@@ -1,5 +1,5 @@
 <script>
-//define as propriedades de largura e alturado pre-loader
+//define as propriedades de largura e altura
 export default {
   props: {
     Height: String,
@@ -9,7 +9,7 @@ export default {
 
 </script>
 <template>
-    <div :style="{width: Width+'px',height: Height+'px'}"></div>
+    <div :style="{width: Width+'px', height: Height+'px'}"></div>
 </template>
 <style scoped>
 div{

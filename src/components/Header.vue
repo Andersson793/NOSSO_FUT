@@ -1,3 +1,7 @@
+<script setup>
+import Partidas from "./Partidas.vue";
+
+</script>
 <template>
     <header>
       <a href="https://nossofut.com/">
@@ -8,6 +12,7 @@
         <img src="../assets/github.png" alt="GitHub" height="35">
       </a>
     </header>
+    <Partidas/>
 </template>
 <style scoped>
 header{

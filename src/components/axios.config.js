@@ -2,7 +2,6 @@ import axios from "axios";
 import {ref} from 'vue'
 
 //configuração e requisição
-
 var APIKey = 'Bearer test_663571e967d0ad3de7f53890f6d87d'
 
 const instance = axios.create({

@@ -3,6 +3,7 @@ import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 import useGetAPI from '../axios.config.js';
 import {ref } from 'vue';
+import Rodada from './Rodada.vue';
 
 const {isReady,hasError,data} = useGetAPI('campeonatos/10/tabela','Tabela')
 
@@ -20,15 +21,13 @@ function setColor(i){
     }
 }
 
+const props = defineProps({
+    rodada:Number
+})
+
 </script>
 <template>
     <section>
-        <div class="title-content">
-            <div>
-                <h1>Tabela Brasileirão</h1>
-                <h2>Série A - 2022</h2>
-            </div>
-        </div>
         <div class="content">
             <div>
                 <select v-show="isReady" id="select" name="campeonatos">
@@ -93,6 +92,7 @@ function setColor(i){
                             </tr>
                         </tbody>
                     </table>
+                    <Rodada  :rodada="props.rodada"/>
                 </div>
                 <Error v-else-if="hasError"/>
                 <PreLoader v-else Width="650" Height="1000"/>
@@ -106,8 +106,7 @@ function setColor(i){
             </div>
             </div>
         </div>
-    </section>
-    
+    </section>   
 </template>
 <style scoped>
 .content{
@@ -120,21 +119,11 @@ function setColor(i){
     width: fit-content;
 }
 
-.title-content{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-h1{
-  font-size: 2.7em;
-  color: #0ac500;
-}
-
 .tabela{
     max-width: 95vw;
     width: fit-content;
     overflow-x: auto;
+    display: flex;
 }
 
 #select{
