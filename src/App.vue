@@ -18,14 +18,27 @@ import Main from './components/Main.vue';
 }
 
 body{
-  font-family: Oswald;
+  font-family: Montserrat;
 }
 
+.conteiner{
+  padding: 5px 10px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.item-center{
+  margin: 0 auto;
+}
+
+/* font */
 @font-face {
-  font-family: Oswald;
-  src:  local("Oswald-Light"),
-        local("Oswald Light"),
-        url('./Oswald/static/Oswald-Light.ttf');
-  font-weight: 800;
+  font-family: Montserrat;
+  font-display: swap;
+  src:  local("Montserrat"),
+        local("Montserrat-Regular"),
+        url('./Montserrat-Regular.ttf');
 }
 </style>

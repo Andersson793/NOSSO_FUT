@@ -3,53 +3,49 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
 </script>
 <template>
     <footer>
-        <a href="https://nossofut.com/">
-            <img src="../assets/logo_transparente.svg" alt="NOSSO FUT" height="30">
-        </a>
-        
-        <div class="conteiner-share">
-            <p>Compartilhe esta página</p>
-            <div>
-                <FacebookIcon url="https://nossofut.com/"/>
-                <TelegramIcon url="https://nossofut.com/"/>
-                <LinkedInIcon url="https://nossofut.com/"/>
-                <WhatsappIcon messase="acompanhe a tabela e artilharia do campeonato brasileiro 2022" url="https://nossofut.com/"/>
-                <TwitterIcon title="acompanhe a tabela e artilharia do campeonato brasileiro 2022" url="https://nossofut.com/"/>
+        <div id="conteiner-footer">
+            <a class="logo" href="https://nossofut.com/">
+                <img src="../assets/logo_transparente.svg" alt="NOSSO FUT" height="35">
+            </a>
+            <div class="conteiner-share">
+                <p>Compartilhe esta página</p>
+                <div>
+                    <FacebookIcon url="https://nossofut.com/"/>
+                    <TelegramIcon url="https://nossofut.com/"/>
+                    <LinkedInIcon url="https://nossofut.com/"/>
+                    <WhatsappIcon messase="acompanhe a tabela do campeonato brasileiro 2022" url="https://nossofut.com/"/>
+                    <TwitterIcon title="acompanhe a tabela do campeonato brasileiro 2022" url="https://nossofut.com/"/>
+                </div>
             </div>
         </div>
-        <span class="privacy">Coletamos alguns dados para o monitoramento de tráfego.</span>
-        <div class="contact">
-            <small>Por <a href="https://github.com/Andersson793">Andersson Gonçalves</a></small>
-        </div>
+        <small>Coletamos alguns dados para monitoramento de tráfego.</small>
         <div class="conteiner-licenca">
-            <p>NOSSO FUT v-0.1.0</p>
+            <span>NOSSO FUT Versão-0.1.0</span>
+            <span title="GNU General Public License v3.0">
+                <img src="../assets/balanca-de-justica.png">
+                GPL-3.0
+            </span>
+            <i title="Github"></i>
         </div>
     </footer>
 </template>
 <style scoped>
 footer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
     background-color: #37F25F;
 }
 
-img{
+#conteiner-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px 20px 10px;
+}
+
+.logo{
     margin-bottom: 20px;
 }
 
-.contact{
-    margin-bottom: 15px;
-}
-
-.privacy{
-    margin-bottom: 30px;
-}
-
 .conteiner-share{
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -57,10 +53,26 @@ img{
     display: inline-flex;
 }
 
+footer > small{
+    margin-left: 20px;
+}
+
 
 footer .conteiner-licenca{
+    margin-top: 10px;
+    text-align: center;
     background-color: #0000001c;
     padding: 8px 0;
+}
+
+.conteiner-licenca span{
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.conteiner-licenca img{
+    margin-right: 5px;
 }
 
 footer .conteiner-share p{

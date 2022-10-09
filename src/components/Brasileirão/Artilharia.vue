@@ -17,7 +17,7 @@ const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia','Artilhar
                 <tbody>
                     <tr v-for="(item,index) in data.slice(0,5)">
                         <td>{{index+1}}°</td>
-                        <td><img :src="item.time.escudo" height="30"></td>
+                        <td><img :src="item.time.escudo" height="35"></td>
                         <td>{{item.atleta.nome_popular}}</td>
                         <td>{{item.gols}}</td>
                         <td>Gols</td>

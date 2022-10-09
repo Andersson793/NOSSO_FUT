@@ -2,7 +2,7 @@
 import useGetAPI from '../axios.config';
 import Tabela from './Tabela.vue';
 import Artilharia from './Artilharia.vue';
-import { onBeforeUpdate, onUpdated, ref } from "vue";
+import { onBeforeUpdate, ref } from "vue";
 
 //chamar a API
 const {isReady,hasError,data} = useGetAPI('campeonatos/10','Brasileirão')

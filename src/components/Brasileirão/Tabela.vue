@@ -13,11 +13,11 @@ if(window.innerWidth <= 400){isSmallDevice.value = true}
 
 function setColor(i){
     if(i == 'v'){
-        return 'green'
+        return '#2BCC38'
     }else if(i == 'd'){
-        return 'red'
+        return '#CD2C2C'
     }else{
-        return 'gray'
+        return '#ACACAC'
     }
 }
 
@@ -92,7 +92,7 @@ const props = defineProps({
                             </tr>
                         </tbody>
                     </table>
-                    <Rodada  :rodada="props.rodada"/>
+                    <Rodada :class="{hidden:isSmallDevice}" :rodada="props.rodada"/>
                 </div>
                 <Error v-else-if="hasError"/>
                 <PreLoader v-else Width="650" Height="1000"/>
@@ -177,7 +177,7 @@ td:nth-child(1){
 
 th:nth-child(2),
 td:nth-child(2){
-    min-width: 130px;
+    min-width: 170px;
     padding-left: 10px;
     text-align: left;
     margin: 1px 0;
@@ -188,12 +188,12 @@ td:nth-child(2){
     justify-content: space-between;
     align-items: center;
     height: 52px;
-    width: 90px;
+    width: 95px;
 }
 
 .b-partidas{
-    width: 8px;
-    height: 8px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
 }
 
