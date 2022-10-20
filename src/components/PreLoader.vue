@@ -9,10 +9,10 @@ export default {
 
 </script>
 <template>
-    <div :style="{width: Width+'px', height: Height+'px'}"></div>
+    <div id="preloader" :style="{width: Width+'px', height: Height+'px'}"></div>
 </template>
 <style scoped>
-div{
+#preloader{
     max-width: 95vw;
     border-radius: 5px;
     animation: loader 2s ease-in-out infinite;

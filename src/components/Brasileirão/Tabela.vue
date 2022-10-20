@@ -28,106 +28,94 @@ const props = defineProps({
 </script>
 <template>
     <section>
-        <div class="content">
+        <div class="flex align-center flex-direction-column">
             <div>
                 <select v-show="isReady" id="select" name="campeonatos">
                     <option value="">Série A</option>
                     <option disabled value="">Série B</option>
                     <option disabled value="">Série C</option>
                 </select>
-                <div class="tabela" v-if="isReady">
-                    <table>
-                        <thead>
-                            <th title="posição">#</th>
-                            <th>Clube</th>
-                            <th title="Pontos">Pts</th>
-                            <th title="Jogos">J</th>
-                            <th title="Vitórias">V</th>
-                            <th title="Empates">E</th>
-                            <th title="Derrotas">D</th>
-                            <th title="Gols pro" :class="{hidden:isSmallDevice}">GP</th>
-                            <th title="Gols contra" :class="{hidden:isSmallDevice}">GC</th>
-                            <th title="Saldo de gols">SG</th>
-                            <th title="Aproveitamento">Apr.</th>
-                            <th title="Últimos jogos">Últ.Jogos</th>
-                        </thead>
-                        <tbody>
-                            <tr v-for="item in data">
-                                <td title="Posição">
-                                    {{item.posicao}}°
-                                </td>
-                                <td>
-                                    {{item.time.nome_popular}}
-                                </td>
-                                <td title="Pontos" class="bg-cell">
-                                    {{item.pontos}}
-                                </td>
-                                <td title="Jogos">
-                                    {{item.jogos}}
-                                </td>
-                                <td title="Vitórias" class="bg-cell">
-                                    {{item.vitorias}}
-                                </td>
-                                <td title="Empates">
-                                    {{item.empates}}
-                                </td>
-                                <td title="Derrotas" class="bg-cell">
-                                    {{item.derrotas}}
-                                </td>
-                                <td title="Gols pro" :class="{hidden:isSmallDevice}">
-                                    {{item.gols_pro}}
-                                </td>
-                                <td title="Gols contra" class="bg-cell" :class="{hidden:isSmallDevice}">
-                                    {{item.gols_contra}}
-                                </td>
-                                <td title="Saldo de gols">
-                                    {{item.saldo_gols}}
-                                </td>
-                                <td title="Aproveitamento" class="bg-cell">
-                                    {{item.aproveitamento.toFixed(0)}}%
-                                </td>
-                                <td title="Útimos jogos" class="ult_partidas">
-                                    <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:setColor(item)}" class="b-partidas"></i>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <Rodada :class="{hidden:isSmallDevice}" :rodada="props.rodada"/>
+                <div class="flex-items-center" v-if="isReady">
+                    <div id="tabela" class="flex scroll">
+                        <table>
+                            <thead>
+                                <th title="posição">#</th>
+                                <th>Clube</th>
+                                <th title="Pontos">Pts</th>
+                                <th title="Jogos">J</th>
+                                <th title="Vitórias">V</th>
+                                <th title="Empates">E</th>
+                                <th title="Derrotas">D</th>
+                                <th title="Gols pro" v-if="!isSmallDevice">GP</th>
+                                <th title="Gols contra" v-if="!isSmallDevice">GC</th>
+                                <th title="Saldo de gols">SG</th>
+                                <th title="Aproveitamento">Apr.</th>
+                                <th title="Últimos jogos">Últ.Jogos</th>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in data">
+                                    <td title="Posição">
+                                        {{item.posicao}}°
+                                    </td>
+                                    <td>
+                                        {{item.time.nome_popular}}
+                                    </td>
+                                    <td title="Pontos" class="bg-cell bold">
+                                        {{item.pontos}}
+                                    </td>
+                                    <td title="Jogos">
+                                        {{item.jogos}}
+                                    </td>
+                                    <td title="Vitórias" class="bg-cell">
+                                        {{item.vitorias}}
+                                    </td>
+                                    <td title="Empates">
+                                        {{item.empates}}
+                                    </td>
+                                    <td title="Derrotas" class="bg-cell">
+                                        {{item.derrotas}}
+                                    </td>
+                                    <td title="Gols pro" v-if="!isSmallDevice">
+                                        {{item.gols_pro}}
+                                    </td>
+                                    <td title="Gols contra" class="bg-cell" v-if="!isSmallDevice">
+                                        {{item.gols_contra}}
+                                    </td>
+                                    <td title="Saldo de gols">
+                                        {{item.saldo_gols}}
+                                    </td>
+                                    <td title="Aproveitamento" class="bg-cell">
+                                        {{item.aproveitamento.toFixed(0)}}%
+                                    </td>
+                                    <td title="Útimos jogos" class="ult_partidas flex-items-center align-center">
+                                        <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:setColor(item)}" class="b-partidas"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <Rodada v-show="!isSmallDevice" :rodada="rodada"/>
                 </div>
                 <Error v-else-if="hasError"/>
-                <PreLoader v-else Width="650" Height="1000"/>
-                <div v-show="isReady" class="info">
+                <PreLoader v-else Width="800" Height="1100"/>
+                <div v-show="isReady" class="flex align-center margin-top-10">
                     <i class="info-color" style="background-color: #008000;"></i>
                     <small>Libertadores</small>
                     <i class="info-color" style="background-color: #ffa500;"></i>
                     <small>Sul-americana</small>
                     <i class="info-color" style="background-color: #ff0000;"></i>
-                <small>Rebaixamento</small>
-            </div>
+                    <small>Rebaixamento</small>
+                </div>
             </div>
         </div>
     </section>   
 </template>
 <style scoped>
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.content div{
-    width: fit-content;
-}
-
-.tabela{
+#tabela{
     max-width: 95vw;
-    width: fit-content;
-    overflow-x: auto;
-    display: flex;
 }
 
 #select{
-    width: fit-content;
     margin-bottom: 20px;
     padding: 5px 8px;
     background-color: white;
@@ -183,32 +171,26 @@ td:nth-child(2){
     margin: 1px 0;
 }
 
+th:last-of-type,
+td:last-of-type{
+    padding: 0;
+    width: 100px;
+    text-align: center;
+}
+
 .ult_partidas{
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
     height: 52px;
-    width: 95px;
 }
 
 .b-partidas{
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-}
-
-.hidden{
-    display: none;
+    margin: 0 3px;
 }
 
 .bg-cell{
     background-color: #0000000e;
-}
-
-.info{
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
 }
 
 .info-color:first-of-type{

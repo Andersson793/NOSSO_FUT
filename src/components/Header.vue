@@ -4,7 +4,7 @@ import Partidas from "./Partidas.vue";
 </script>
 <template>
     <header>
-      <div class="nav-bar">
+      <div id="nav-bar" class="flex-space-around">
         <a href="https://nossofut.com/">
           <img src="../assets/logo.svg" alt="NOSSO FUT" height="30">
         </a>
@@ -21,16 +21,9 @@ header{
   margin-bottom: 80px;
 }
 
-.nav-bar{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+#nav-bar{
   padding: 9px 0 7px 0;
-  background-color: #37F25F;
+  background-color: #53f877;
   box-shadow: 0px 2px 2px rgb(179, 179, 179); 
-}
-
-header nav a{
-  margin: 0 20px;
 }
 </style>

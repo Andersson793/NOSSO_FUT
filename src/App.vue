@@ -21,24 +21,134 @@ body{
   font-family: Montserrat;
 }
 
+img{
+  width: auto;
+}
+
+h1{
+  font-size: 2.7em;
+  color: #0ac500;
+  text-transform: uppercase;
+}
+
+/* classes globais */
+
 .conteiner{
-  padding: 5px 10px;
+  padding: 8px 15px;
+}
+
+.fit-content{
+  width: fit-content;
 }
 
 .text-center{
   text-align: center;
 }
 
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-gray{
+  color: rgb(122, 122, 122);
+}
+
 .item-center{
   margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.flex-space-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-space-around{
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-items-center{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-direction-column{
+  flex-direction: column;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.paddind-10-20{
+  padding: 10px 20px;
+}
+
+.margin-0-10{
+  margin: 0 10px
+}
+
+.margin-0-5{
+  margin: 0 5px;
+}
+
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+
+.margin-bottom-90{
+  margin-bottom: 90px;
+}
+
+.margin-top-10{
+  margin-top: 10px;
+}
+
+.margin-top-90{
+  margin-top: 90px;
+}
+
+.scroll{
+  overflow-x: auto;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.border-style-top{
+  border-top: 1px solid #DFDEDE;
+}
+
+.border-style-bottom{
+  border-bottom: 1px solid #DFDEDE;
+}
+
+.border-style-left{
+  border-left: 1px solid #DFDEDE;
+}
+
+.border-style-right{
+  border-right: 1px solid #DFDEDE;
 }
 
 /* font */
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src:  local("Montserrat"),
-        local("Montserrat-Regular"),
+  src:  local("Montserrat-Regular"),
         url('./Montserrat-Regular.ttf');
 }
 </style>

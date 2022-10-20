@@ -15,29 +15,10 @@ onBeforeUpdate(() => {
 
 </script>
 <template>
-    <div id="title" v-if="isReady">
+    <div class="conteiner text-right item-center fit-content margin-bottom-90" v-if="isReady">
         <h1>{{data.nome_popular}}</h1>
-        <p>{{data.edicao_atual.temporada}}</p>
+        <p style="font-size:2em">{{data.edicao_atual.temporada}}</p>
     </div>
     <Tabela :rodada="rodada"/>
     <Artilharia/>
 </template>
-<style scoped>
-#title{
-    width: fit-content;
-    text-align: right;
-    margin: 0 auto;
-    margin-bottom: 70px;
-}
-
-h1{
-  font-size: 2.7em;
-  color: #0ac500;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-p{
-    font-size: 1.8em;
-}
-</style>

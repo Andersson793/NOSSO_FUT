@@ -12,25 +12,29 @@ const {isReady,hasError,data} = useGetAPI(`campeonatos/10/rodadas/${props.rodada
 </script>
 <template>
     <div v-if="isReady" id="rodada">
-        <header>
-            <p>{{data.rodada}}° RODADA</p>
+        <header class="flex-items-center align-center border-style-bottom border-style-top">
+            <p class="bold">{{data.rodada}}° RODADA</p>
         </header>
-        <div class="content">
-            <div v-for="item in data.partidas" class="partida">
+        <div class="flex-direction-column">
+            <div v-for="item in data.partidas" class="conteiner text-center border-style-bottom">
                 <small>{{item.estadio.nome_popular}} - {{item.data_realizacao}} às {{item.hora_realizacao}}</small>
-                <div>
+                <div class="flex-items-center align-center">
                     <img
                         :title="item.time_mandante.nome_popular"
                         :src="item.time_mandante.escudo"
                         :alt="item.time_mandante.nome_popular"
+                        height="40"
                     >
-                    <span class="placar">{{item.placar_mandante}}</span>
-                    <span class="placar">-</span>
-                    <span class="placar">{{item.placar_visitante}}</span>
+                    <div class="placar">
+                        <span>{{item.placar_mandante}}</span>
+                        <span>-</span>
+                        <span>{{item.placar_visitante}}</span>
+                    </div>
                     <img
                         :title="item.time_visitante.nome_popular"
                         :src="item.time_visitante.escudo"
                         :alt="item.time_visitante.nome_popular"
+                        height="40"
                     >
                 </div>
                 <small class="status">{{item.status}}</small>
@@ -43,43 +47,17 @@ const {isReady,hasError,data} = useGetAPI(`campeonatos/10/rodadas/${props.rodada
     margin-left: 15px;
 }
 
+.placar span{
+    margin: 0 5px;
+    font-size: 1.8em;
+}
+
 header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 200px;
-    border-top: 1px solid #DFDEDE;
-    border-bottom: 1px solid #DFDEDE;
     height: 53px;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.partida div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.partida{
-    border-bottom: 1px solid #DFDEDE;
-    text-align: center;
-    padding-bottom: 5px;
-}
-
 img{
-    height: 40px;
     margin: 8px;
-}
-
-.placar{
-    margin: 0 5px;
-    font-size: 1.8em;
 }
 
 .status{
