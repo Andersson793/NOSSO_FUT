@@ -2,16 +2,11 @@
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 import useGetAPI from '../axios.config.js';
-import {ref } from 'vue';
 import Rodada from './Rodada.vue';
 
 const {isReady,hasError,data} = useGetAPI('campeonatos/10/tabela','Tabela')
 
-const isSmallDevice = ref(false);
-
-if(window.innerWidth <= 400){isSmallDevice.value = true}
-
-function setColor(i){
+function definirCor(i){
     if(i == 'v'){
         return '#2BCC38'
     }else if(i == 'd'){
@@ -36,7 +31,7 @@ const props = defineProps({
                     <option disabled value="">Série C</option>
                 </select>
                 <div class="flex-items-center" v-if="isReady">
-                    <div id="tabela" class="flex scroll">
+                    <div style="max-width: 95vw;" class="flex scroll">
                         <table>
                             <thead>
                                 <th title="posição">#</th>
@@ -46,8 +41,8 @@ const props = defineProps({
                                 <th title="Vitórias">V</th>
                                 <th title="Empates">E</th>
                                 <th title="Derrotas">D</th>
-                                <th title="Gols pro" v-if="!isSmallDevice">GP</th>
-                                <th title="Gols contra" v-if="!isSmallDevice">GC</th>
+                                <th title="Gols pro" class="hidden-on-small-device">GP</th>
+                                <th title="Gols contra" class="hidden-on-small-device">GC</th>
                                 <th title="Saldo de gols">SG</th>
                                 <th title="Aproveitamento">Apr.</th>
                                 <th title="Últimos jogos">Últ.Jogos</th>
@@ -75,10 +70,10 @@ const props = defineProps({
                                     <td title="Derrotas" class="bg-cell">
                                         {{item.derrotas}}
                                     </td>
-                                    <td title="Gols pro" v-if="!isSmallDevice">
+                                    <td title="Gols pro" class="hidden-on-small-device">
                                         {{item.gols_pro}}
                                     </td>
-                                    <td title="Gols contra" class="bg-cell" v-if="!isSmallDevice">
+                                    <td title="Gols contra" class="bg-cell hidden-on-small-device">
                                         {{item.gols_contra}}
                                     </td>
                                     <td title="Saldo de gols">
@@ -88,13 +83,13 @@ const props = defineProps({
                                         {{item.aproveitamento.toFixed(0)}}%
                                     </td>
                                     <td title="Útimos jogos" class="ult_partidas flex-items-center align-center">
-                                        <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:setColor(item)}" class="b-partidas"></i>
+                                        <i v-for="item in item.ultimos_jogos" :style="{backgroundColor:definirCor(item)}" class="b-partidas"></i>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <Rodada v-show="!isSmallDevice" :rodada="rodada"/>
+                    <Rodada class="hidden-on-small-device" :rodada="rodada"/>
                 </div>
                 <Error v-else-if="hasError"/>
                 <PreLoader v-else Width="800" Height="1100"/>
@@ -111,10 +106,6 @@ const props = defineProps({
     </section>   
 </template>
 <style scoped>
-#tabela{
-    max-width: 95vw;
-}
-
 #select{
     margin-bottom: 20px;
     padding: 5px 8px;
@@ -183,10 +174,10 @@ td:last-of-type{
 }
 
 .b-partidas{
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
-    margin: 0 3px;
+    margin: 0 2px;
 }
 
 .bg-cell{

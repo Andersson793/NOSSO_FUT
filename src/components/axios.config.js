@@ -2,7 +2,7 @@ import axios from "axios";
 import {ref} from 'vue'
 
 //configuração e requisição
-var APIKey = 'Bearer test_663571e967d0ad3de7f53890f6d87d'
+const APIKey = 'Bearer test_663571e967d0ad3de7f53890f6d87d'
 
 const instance = axios.create({
     baseURL: 'https://api.api-futebol.com.br/v1',
@@ -21,8 +21,9 @@ export default function useGetAPI(url,component){
         data.value = response.data;
         isReady.value = true;
     }).catch((err) => {
+        isReady.value = true;
         hasError.value = true;
-        console.log(component+':'+err.request.response)
+        console.log('Houve um erro. '+component+':'+ err.message)
     })
 
     return {isReady,hasError,data}

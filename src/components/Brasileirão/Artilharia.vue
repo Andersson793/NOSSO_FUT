@@ -12,13 +12,18 @@ const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia','Artilhar
         <TitleSections>
             Ranking de Artilharia
         </TitleSections>
-        <div class="content">
+        <div class="conteiner flex-space-center">
             <table v-if="isReady">
                 <tbody>
                     <tr v-for="(item,index) in data.slice(0,5)">
                         <td>{{index+1}}°</td>
                         <td><img :src="item.time.escudo" height="35"></td>
-                        <td>{{item.atleta.nome_popular}}</td>
+                        <td>
+                            <div>
+                                {{item.atleta.nome_popular}}
+                            </div>
+                            <small style="color: gray;margin-top: 0;">Palmeiras</small>
+                        </td>
                         <td>{{item.gols}}</td>
                         <td>Gols</td>
                     </tr>
@@ -30,11 +35,6 @@ const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia','Artilhar
     </section>
 </template>
 <style scoped>
-.content{
-    display: flex;
-    justify-content: center;
-}
-
 table{
     width: fit-content;
     border-collapse:collapse;

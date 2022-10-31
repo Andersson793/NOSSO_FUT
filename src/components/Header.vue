@@ -3,24 +3,17 @@ import Partidas from "./Partidas.vue";
 
 </script>
 <template>
-    <header>
+    <header style="margin-bottom: 80px;">
       <div id="nav-bar" class="flex-space-around">
         <a href="https://nossofut.com/">
           <img src="../assets/logo.svg" alt="NOSSO FUT" height="30">
         </a>
-
-        <a href="https://github.com/Andersson793/NOSSO_FUT">
-          <img src="../assets/github.png" alt="GitHub" height="35">
-        </a>
+        <div>Menu</div>
       </div>
       <Partidas/>
     </header>
 </template>
 <style scoped>
-header{
-  margin-bottom: 80px;
-}
-
 #nav-bar{
   padding: 9px 0 7px 0;
   background-color: #53f877;

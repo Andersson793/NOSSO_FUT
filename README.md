@@ -2,10 +2,6 @@
 
 Um site que acompanha os principais campeonatos do brasil e do mundo.
 
-## Atributos do site
-
-A ideia e que seja um site leve e responsivo.
-
 ## Bibliotecas  utilizadas
 
 [Axios](https://axios-http.com/)

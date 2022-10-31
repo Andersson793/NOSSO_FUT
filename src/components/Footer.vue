@@ -4,7 +4,7 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
 <template>
     <footer>
         <div class="conteiner flex-space-between align-center">
-            <a id="logo" href="https://nossofut.com/">
+            <a href="https://nossofut.com/">
                 <img src="../assets/logo_transparente.svg" alt="NOSSO FUT" height="32">
             </a>
             <div>
@@ -19,10 +19,10 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
             </div>
         </div>
         <div class="conteiner">
-            <strong>Coletamos alguns dados para monitoramento de tráfego.</strong>
+            <strong style="font-size: 0.8em;">Não utilzamos cookies.</strong>
         </div> 
         <div id="conteiner-licenca" class="conteiner flex-items-center align-center">
-            <span>NOSSO FUT Versão-1.0.0</span>
+            <span>NOSSO FUT Versão-0.1.0 - beta</span>
             <img src="../assets/balanca-de-justica.png">
             <span>GPL-3.0</span>
             <img src="../assets/github.png" height="23" alt="">
@@ -34,10 +34,6 @@ import { FacebookIcon, WhatsappIcon, TelegramIcon, LinkedInIcon, TwitterIcon } f
 <style scoped>
 footer{
     background-color: #37F25F;
-}
-
-#logo{
-    margin-bottom: 20px;
 }
 
 #conteiner-licenca{
@@ -52,9 +48,5 @@ footer{
 
 #conteiner-licenca img{
     margin-right: 12px;
-}
-
-strong{
-    font-size: 0.8em;
 }
 </style>

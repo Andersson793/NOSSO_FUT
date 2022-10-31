@@ -9,6 +9,10 @@ const props = defineProps({
 //chamar API
 const {isReady,hasError,data} = useGetAPI(`campeonatos/10/rodadas/${props.rodada}`,'Brasileirão')
 
+if(isReady && hasError){
+    console.warn('Não foi possível carregar este componente')
+}
+
 </script>
 <template>
     <div v-if="isReady" id="rodada">

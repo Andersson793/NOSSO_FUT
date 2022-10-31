@@ -2,11 +2,13 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Main from './components/Main.vue';
+import Apoiadores from './components/Apoiadores.vue';
 </script>
 
 <template>
   <Header/>
   <Main/>
+  <Apoiadores/>
   <Footer/>
 </template>
 
@@ -26,15 +28,15 @@ img{
 }
 
 h1{
-  font-size: 2.7em;
+  font-size: 2.8em;
   color: #0ac500;
-  text-transform: uppercase;
 }
 
 /* classes globais */
 
 .conteiner{
   padding: 8px 15px;
+  max-width: 100vw;
 }
 
 .fit-content{
@@ -78,6 +80,13 @@ h1{
   display: flex;
   justify-content: space-around;
 }
+
+.flex-space-center{
+  display: flex;
+  justify-content: center;
+}
+
+/* remover */
 
 .flex-items-center{
   display: flex;
@@ -142,6 +151,14 @@ h1{
 
 .border-style-right{
   border-right: 1px solid #DFDEDE;
+}
+
+/* media queries */
+
+@media screen and (max-width: 720px){
+  .hidden-on-small-device{
+    display: none;
+  }
 }
 
 /* font */

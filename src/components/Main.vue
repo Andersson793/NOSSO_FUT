@@ -1,5 +1,5 @@
 <script setup>
-import Brasileirao from './Brasileirão/Brasileirao.vue';
+import Brasileirao from './Brasileirão/index.vue';
 </script>
 <template>
     <main class="margin-bottom-90">

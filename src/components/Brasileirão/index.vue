@@ -17,7 +17,7 @@ onBeforeUpdate(() => {
 <template>
     <div class="conteiner text-right item-center fit-content margin-bottom-90" v-if="isReady">
         <h1>{{data.nome_popular}}</h1>
-        <p style="font-size:2em">{{data.edicao_atual.temporada}}</p>
+        <p style="font-size:1.9em">{{data.edicao_atual.temporada}}</p>
     </div>
     <Tabela :rodada="rodada"/>
     <Artilharia/>
