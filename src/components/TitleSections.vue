@@ -1,7 +1,7 @@
 <template>
     <!--este componente define um título de seção-->
-<div style="margin-bottom: 70px;" class="flex-items-center margin-top-90">
-    <h3 style="font-size: 1.4em;">
+<div class="mb-20 mt-24 text-center">
+    <h3 class="text-lg font-bold">
         <slot/>
     </h3>
 </div>

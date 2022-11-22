@@ -1,16 +1,6 @@
 <template>
-    <div>
-        <p>Ops, pareçe que houve um erro</p>
+    <div class="my-24 text-center">
+        <p class="mb-5">Ops, pareçe que houve um erro</p>
         <a href="https://nossofut.com/">tente novamente</a>
     </div>
 </template>
-<style scoped>
-div{
-    margin: 100px 0;
-    text-aling: center;
-}
-
-div p{
-    margin-bottom: 20px;
-}
-</style>

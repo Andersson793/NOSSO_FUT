@@ -1,40 +1,32 @@
 <script setup>
 import TitleSections from './TitleSections.vue';
-//**pendêndia
-//utilizar a API do Apoia-se para pegar os nomes dos apoadores
+const td_style  = "px-5 py-2"
 </script>
 <template>
     <!--seção de apoiadores do site-->
     <TitleSections>
         Apoiadores
     </TitleSections>
-    <div class="conteiner text-center margin-bottom-90">
-        <table style="margin-bottom: 50px;" class="item-center">
+    <div class="flex flex-col text-center">
+        <table class="text-sm w-fit m-auto text-neutral-500">
             <tbody>
                 <tr>
-                    <td>Andersson S. Gonçalves</td>
-                    <td>Pedro Abael Juniro</td>
-                    <td>José Alexandre</td>
+                    <td :class="td_style">Andersson S. Gonçalves</td>
+                    <td :class="td_style">Sua logo aqui.</td>
+                    <td :class="td_style">José Alexandre</td>
                 </tr>
                 <tr>
-                    <td>Renato Cardoso</td>
-                    <td>Fernanda Gentile</td>
-                    <td>Carlos josé</td>
+                    <td :class="td_style">Sua logo aqui.</td>
+                    <td :class="td_style">Fernanda Gentile</td>
+                    <td :class="td_style">Carlos josé</td>
                 </tr>
                 <tr>
-                    <td>Elder Rocha</td>
-                    <td>Felipe Castro</td>
-                    <td>Wendell Gomes da Silva</td>
+                    <td :class="td_style">Elder Rocha</td>
+                    <td :class="td_style">Felipe Castro</td>
+                    <td :class="td_style">Wendell Gomes da Silva</td>
                 </tr>
             </tbody>
         </table>
-        <strong style="font-size: 0.8em;">Vocẽ tambem poder ser um apoiador ! <a href="https://apoia.se/nosso_fut">Apoia-se</a></strong>
+        <a class="text-sm mt-10" href="https://apoia.se/nosso_fut">Torne-se um apoiador.</a>
     </div>
 </template>
-<style scoped>
-td{
-    color: gray;
-    padding: 10px;
-    text-align: center;
-}
-</style>
