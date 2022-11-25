@@ -14,7 +14,7 @@ const td_style = "px-1";
             Ranking de Artilharia
         </TitleSections>
         <div class="flex justify-center">
-            <table class="text-sm md:text-base" v-if="isReady">
+            <table class="text-sm sm:text-base" v-if="isReady">
                 <tbody>
                     <tr class="hover:bg-neutral-100 border-t-2 border-gray-200" v-for="(item,index) in data.slice(0,5)">
                         <td :class="td_style">{{index+1}}°</td>

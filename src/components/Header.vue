@@ -7,7 +7,7 @@ import Partidas from "./Partidas.vue";
 
         <!--logo-->
         <a href="https://nossofut.com/">
-          <img class="h-9" src="../assets/logo.svg" alt="NOSSO FUT">
+          <img class="h-8" src="../assets/logo.svg" alt="NOSSO FUT">
         </a>
 
         <div>
