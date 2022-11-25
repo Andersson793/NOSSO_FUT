@@ -1,6 +1,5 @@
 <script setup>
 import TitleSections from './TitleSections.vue';
-const td_style  = "px-5 py-2"
 </script>
 <template>
     <!--seção de apoiadores do site-->
@@ -8,25 +7,18 @@ const td_style  = "px-5 py-2"
         Apoiadores
     </TitleSections>
     <div class="flex flex-col text-center">
-        <table class="text-sm w-fit m-auto text-neutral-500">
+        <table class="text-sm w-fit m-auto text-neutral-500 mb-12">
             <tbody>
                 <tr>
-                    <td :class="td_style">Andersson S. Gonçalves</td>
-                    <td :class="td_style">Sua logo aqui.</td>
-                    <td :class="td_style">José Alexandre</td>
-                </tr>
-                <tr>
-                    <td :class="td_style">Sua logo aqui.</td>
-                    <td :class="td_style">Fernanda Gentile</td>
-                    <td :class="td_style">Carlos josé</td>
-                </tr>
-                <tr>
-                    <td :class="td_style">Elder Rocha</td>
-                    <td :class="td_style">Felipe Castro</td>
-                    <td :class="td_style">Wendell Gomes da Silva</td>
+                    <td class="cursor-pointer px-5 py-2">Seu nome aqui.</td>
                 </tr>
             </tbody>
         </table>
-        <a class="text-sm mt-10" href="https://apoia.se/nosso_fut">Torne-se um apoiador.</a>
+        <small>
+            você tambem pode se tornar um apoiador.
+        </small>
+        <a class="m-auto text-orange-600 mt-5" href="https://apoia.se/nosso_fut">
+            <img class="h-6" src="../assets/apoia-se.png" alt="apoia-se">
+        </a> 
     </div>
 </template>

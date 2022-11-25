@@ -14,7 +14,7 @@ if(isReady && hasError){
 }
 </script>
 <template>
-    <table v-if="isReady" id="rodada">
+    <table class="hidden sm:block" v-if="isReady" id="rodada">
         <thead class="border-t-2 border-gray-200">
             <th class="h-14">{{data.rodada}}° RODADA</th>
         </thead>

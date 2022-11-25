@@ -7,5 +7,12 @@ const props = defineProps({
 })
 </script>
 <template>
-    <div class="animate-pulse"  :style="{width: prop_width+'px', height: prop_height+'px'}"></div>
+    <div 
+      class="bg-gray-200 animate-pulse rounded-sm max-w-full"  
+      :style="{
+        width: prop_width+'px',
+        height: prop_height+'px'
+      }"
+    >
+    </div>
 </template>

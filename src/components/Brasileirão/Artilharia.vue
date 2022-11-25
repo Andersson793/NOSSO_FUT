@@ -6,7 +6,7 @@ import PreLoader from '../PreLoader.vue';
 
 const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia','Artilharia')
 
-const td_style = "px-2 py-2";
+const td_style = "px-1";
 </script>
 <template>
     <section>
@@ -14,14 +14,14 @@ const td_style = "px-2 py-2";
             Ranking de Artilharia
         </TitleSections>
         <div class="flex justify-center">
-            <table v-if="isReady">
+            <table class="text-sm md:text-base" v-if="isReady">
                 <tbody>
                     <tr class="hover:bg-neutral-100 border-t-2 border-gray-200" v-for="(item,index) in data.slice(0,5)">
                         <td :class="td_style">{{index+1}}°</td>
                         <td :class="td_style">
-                            <img class="h-10" :src="item.time.escudo">
+                            <img class="h-9" :src="item.time.escudo">
                         </td>
-                        <td class="py-2 pr-10">
+                        <td class="py-2 pl-1 pr-10">
                             <div>
                                 {{item.atleta.nome_popular}}
                             </div>
@@ -33,7 +33,7 @@ const td_style = "px-2 py-2";
                 </tbody>
             </table>
             <Error v-else-if="hasError"/>
-            <PreLoader v-else prop_width="310" prop_height="250"/>
+            <PreLoader v-else :prop_width="310" :prop_height="250"/>
         </div>
     </section>
 </template>

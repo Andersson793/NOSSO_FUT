@@ -4,14 +4,18 @@ const {isReady,hasError,data} = useGetAPI('ao-vivo','Partidas')
 
 </script>
 <template>
-    <div class="pl-1 mt-5">
-        <div class="bg-blue-400 rounded-sm mb-1 w-14 text-center py-1 text-xs">
-            ao-vivo
+    <div class="pl-1 mt-2 mb-28">
+        <div class="rounded-sm mb-1 py-1 text-xs font-bold bg-gray-100 w-28 text-center">
+            Partidas ao-vivo
         </div>
-        <div class="flex align-middle">
-            <div class="text-center px-2 w-48 truncate bg-green-500 rounded-sm mr-1 mb-1" v-for="item in data">
+        <div class="inline-flex w-full overflow-scroll">
+            <div
+                v-for="item in data" 
+                class="w-44 text-center truncate px-2 bg-gray-100 rounded-sm mr-1 mb-1"
+                style="min-width:170px"
+            >
                 <small class="font-bold">{{item.campeonato.nome}}</small>
-                <div class="flex align-middle justify-center my-2">
+                <div class="flex items-center justify-center my-2">
                     <img
                         class="h-8"
                         :alt="item.time_mandante.nome_popular"
