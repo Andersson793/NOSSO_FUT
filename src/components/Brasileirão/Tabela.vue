@@ -16,10 +16,6 @@ function setColor(i){
     }
 }
 
-const props = defineProps({
-    rodada:Number
-})
-
 const th_style = "px-4 h-14";
 const td_style = "px-4 h-14 text-center";
 const td_bg  = "bg-neutral-100";
@@ -95,7 +91,7 @@ const td_bg  = "bg-neutral-100";
                             </tr>
                         </tbody>
                     </table>
-                    <Rodada :rodada="rodada"/> 
+                    <Rodada/> 
                 </div>
                 <Error v-else-if="hasError"/>
                 <PreLoader v-else :prop_width="800" :prop_height="1100"/>

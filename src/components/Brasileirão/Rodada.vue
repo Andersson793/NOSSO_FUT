@@ -1,22 +1,17 @@
-<script setup>
+<script>
 import useGetAPI from '../axios.config.js';
+import { useStore } from "../../stores/campeonato.js";
+import { storeToRefs } from 'pinia'
 
-//props
-const props = defineProps({
-  rodada: Number
-})
+const rodada = 0;
 
-//chamar API
-const {isReady,hasError,data} = useGetAPI(`campeonatos/10/rodadas/${props.rodada}`,'Brasileirão')
+const isReady = true;
 
-if(isReady && hasError){
-    console.warn('Não foi possível carregar este componente')
-}
 </script>
 <template>
     <table class="hidden sm:block" v-if="isReady" id="rodada">
         <thead class="border-t-2 border-gray-200">
-            <th class="h-14">{{data.rodada}}° RODADA</th>
+            <th class="h-14">{{rodada}}° RODADA</th>
         </thead>
         <tbody>
             <tr class="border-t-2 border-gray-200 text-center" v-for="item in data.partidas">

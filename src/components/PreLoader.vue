@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 <template>
     <div 
-      class="bg-gray-200 animate-pulse rounded-sm max-w-full"  
+      class="bg-gray-200 animate-pulse rounded-md max-w-full"  
       :style="{
         width: prop_width+'px',
         height: prop_height+'px'

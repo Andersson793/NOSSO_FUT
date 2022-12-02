@@ -13,7 +13,6 @@ const instance = axios.create({
 
 export default function useGetAPI(url,component){
 
-    //***********
     const isReady = ref(false)
     const hasError = ref(false)
     const data = ref(null)
@@ -24,7 +23,7 @@ export default function useGetAPI(url,component){
     }).catch((err) => {
         isReady.value = true;
         hasError.value = true;
-        console.warn('Houve um erro no componente '+component+':'+ err.message)
+        console.warn('Houve um de chamada API no componente '+component+':'+ err.message)
     })
 
     return {isReady,hasError,data}

@@ -3,17 +3,12 @@ import Partidas from "./Partidas.vue";
 </script>
 <template>
     <header class="bg-green-400 border-b-4 border-neutral">
-      <div class="flex justify-evenly py-2 items-center">
-
-        <!--logo-->
-        <a href="https://nossofut.com/">
-          <img class="h-8" src="../assets/logo.svg" alt="NOSSO FUT">
-        </a>
-
+      <div class="flex justify-center py-2 items-center">
+        <img class="h-10 mr-5 hidden sm:block" src="../assets/brasileiro-seriea.png" alt="">
+        <h1 class="text-3xl sm:text-4xl text-white uppercase">
+          Brasileirão Série B
+        </h1>
         <div>
-          <a href="https://apoia.se/nosso_fut">
-            <img title="github" class="h-5" src="../assets/apoia-se.png" alt="github do site">
-          </a>
         </div>
       </div>
     </header>
