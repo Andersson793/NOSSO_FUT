@@ -1,11 +1,13 @@
-<script>
+<script setup>
 import useGetAPI from '../axios.config.js';
-import { useStore } from "../../stores/campeonato.js";
-import { storeToRefs } from 'pinia'
+import { useStore } from "@/stores/campeonato.js";
+import { storeToRefs } from 'pinia';
 
-const rodada = 0;
+const stores = storeToRefs(useStore());
 
-const isReady = true;
+var rodada = stores.rodada;
+
+const {isReady,hasError,data} = useGetAPI(`https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/${rodada}`,'Partidas')
 
 </script>
 <template>

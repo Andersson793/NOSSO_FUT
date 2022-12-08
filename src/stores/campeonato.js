@@ -2,16 +2,16 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useStore = defineStore('campeonato',() =>{
-  const nome = ref("copa do mundo de londres")
-  const rodada  = ref(187)
+  const nome = ref("copa do mundo do Catar")
+  const rodada  = ref(19)
 
-  function alterarNome(params) {
-    nome.value = params
+  function alterarNome(param) {
+    nome.value = param
   }
 
-  function alterarRodada(params) {
-    rodada.value = params
+  function alterarRodada(param) {
+    rodada.value = param
   }
 
-  return { nome, rodada, alterarNome, alterarRodada }
+  return { nome, rodada, alterarNome, alterarRodada}
 })
