@@ -1,10 +1,10 @@
 <script setup>
 import TitleSections from '../TitleSections.vue';
-import useGetAPI from '../axios.config.js';
+import useGetAPI from '../../axios/axios.request.js';
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
 
-const {isReady,hasError,data} = useGetAPI('/campeonatos/10/artilharia','Artilharia')
+const {isReady,hasError,response} = useGetAPI('/campeonatos/10/artilharia','Artilharia')
 
 const td_style = "px-1";
 
@@ -17,7 +17,7 @@ const td_style = "px-1";
         <div class="flex justify-center">
             <table class="text-sm sm:text-base" v-if="isReady">
                 <tbody>
-                    <tr class="hover:bg-neutral-100 border-t-2 border-gray-200" v-for="(item,index) in data.slice(0,5)">
+                    <tr class="hover:bg-neutral-100 border-t-2 border-gray-200" v-for="(item,index) in response.slice(0,5)">
                         <td :class="td_style">{{index+1}}°</td>
                         <td :class="td_style">
                             <img class="h-9" :src="item.time.escudo">

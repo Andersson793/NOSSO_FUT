@@ -1,11 +1,9 @@
 <script setup>
-import useGetAPI from './axios.config.js';
+import useGetAPI from '../axios/axios.request.js';
 import PreLoader from './PreLoader.vue';
-const {isReady,hasError,data} = useGetAPI('ao-vivo','Partidas')
 
-if(hasError){
-    console.warn("Não foi possível carregar o componente Partidas")
-}
+const {isReady,hasError,response} = useGetAPI('ao-vivo','Partidas')
+
 </script>
 <template>
     <div class="pl-1 mt-2 mb-28">
@@ -14,7 +12,7 @@ if(hasError){
         </div>
         <div v-if="isReady" class="inline-flex w-full overflow-scroll">
             <div
-                v-for="item in data" 
+                v-for="item in response" 
                 class="w-44 text-center truncate px-2 bg-gray-100 rounded-sm mr-1 mb-1"
                 style="min-width:170px"
             >

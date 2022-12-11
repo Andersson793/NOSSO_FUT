@@ -1,20 +1,24 @@
 <script setup>
-import useGetAPI from '../axios.config';
+import useGetAPI from '../../axios/axios.request';
 import Tabela from './Tabela.vue';
 import Artilharia from './Artilharia.vue';
-import { onBeforeUpdate, ref } from "vue";
+
 import { useStore } from "@/stores/campeonato.js";
-import { storeToRefs } from 'pinia'
+import { watch, watchEffect } from 'vue';
 
-const state  = storeToRefs(useStore());
+const store  = useStore()
+const {alterarNome, alterarRodada } = store
 
-//const {data,isReady,hasError} = useGetAPI("","Brasileirão");
+const {isReady, hasError, response} = useGetAPI("https://api.api-futebol.com.br/v1/campeonatos/10","Brasileirão");
 
-console.log(state.alterarNome)
-
+//observa a mudança na resposta
+watch(response, () =>{
+    alterarNome(response.value.nome)
+    alterarRodada(response.value.rodada_atual.rodada)
+})
 
 </script>
 <template>
-    <Tabela/>
-    <Artilharia/>
+        <Tabela/>
+        <Artilharia/>
 </template>

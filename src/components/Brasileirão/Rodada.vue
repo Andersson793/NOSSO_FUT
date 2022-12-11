@@ -1,13 +1,12 @@
 <script setup>
-import useGetAPI from '../axios.config.js';
+import useGetAPI from '../../axios/axios.request.js';
 import { useStore } from "@/stores/campeonato.js";
 import { storeToRefs } from 'pinia';
 
-const stores = storeToRefs(useStore());
+const store  = useStore()
+const {rodada} = storeToRefs(store)
 
-var rodada = stores.rodada;
-
-const {isReady,hasError,data} = useGetAPI(`https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/${rodada}`,'Partidas')
+const {isReady,hasError,response} = useGetAPI(`https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/${rodada}`,'Partidas')
 
 </script>
 <template>
@@ -16,7 +15,7 @@ const {isReady,hasError,data} = useGetAPI(`https://api.api-futebol.com.br/v1/cam
             <th class="h-14">{{rodada}}° RODADA</th>
         </thead>
         <tbody>
-            <tr class="border-t-2 border-gray-200 text-center" v-for="item in data.partidas">
+            <tr v-for="item in response.partidas" class="border-t-2 border-gray-200 text-center">
                 <td>
                     <small>
                         {{item.estadio.nome_popular}} - {{item.data_realizacao}} às {{item.hora_realizacao}}

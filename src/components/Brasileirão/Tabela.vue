@@ -1,10 +1,10 @@
 <script setup>
 import Error from '../Error.vue';
 import PreLoader from '../PreLoader.vue';
-import useGetAPI from '../axios.config.js';
+import useGetAPI from '../../axios/axios.request.js';
 import Rodada from './Rodada.vue';
 
-const {isReady,hasError,data} = useGetAPI('campeonatos/10/tabela','Tabela')
+const {isReady,hasError,response} = useGetAPI('campeonatos/10/tabela','Tabela')
 
 function setColor(i){
     if(i == 'v'){
@@ -47,7 +47,7 @@ const td_bg  = "bg-neutral-100";
                             <th :class="th_style" title="Últimos jogos">Últ.Jogos</th>
                         </thead>
                         <tbody>
-                            <tr class="border-t-2 border-gray-200 hover:bg-gray-50" v-for="item in data">
+                            <tr class="border-t-2 border-gray-200 hover:bg-gray-50" v-for="item in response">
                                 <td class="px-1" title="Posição">
                                     {{item.posicao}}°
                                 </td>
@@ -91,7 +91,7 @@ const td_bg  = "bg-neutral-100";
                             </tr>
                         </tbody>
                     </table>
-                    <Rodada/> 
+                    <Rodada/>
                 </div>
                 <Error v-else-if="hasError"/>
                 <PreLoader v-else :prop_width="800" :prop_height="1100"/>

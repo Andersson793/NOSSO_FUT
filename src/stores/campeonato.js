@@ -2,8 +2,8 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useStore = defineStore('campeonato',() =>{
-  const nome = ref("copa do mundo do Catar")
-  const rodada  = ref(19)
+  const nome = ref("campeonato brasileiro")
+  const rodada  = ref(1)
 
   function alterarNome(param) {
     nome.value = param
