@@ -13,7 +13,7 @@ const {isReady, hasError, response} = useGetAPI("https://api.api-futebol.com.br/
 
 //observa a mudança na resposta
 watch(response, () =>{
-    alterarNome(response.value.nome)
+    alterarNome(response.value.nome_popular)
     alterarRodada(response.value.rodada_atual.rodada)
 })
 
