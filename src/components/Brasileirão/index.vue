@@ -12,7 +12,7 @@ const {alterarNome, alterarRodada } = store
 const {isReady, hasError, response} = useGetAPI("https://api.api-futebol.com.br/v1/campeonatos/10","Brasileirão");
 
 //observa a mudança na resposta
-watch(response, () =>{
+watch(response, () => {
     alterarNome(response.value.nome_popular)
     alterarRodada(response.value.rodada_atual.rodada)
 })
@@ -20,5 +20,4 @@ watch(response, () =>{
 </script>
 <template>
         <Tabela/>
-        <Artilharia/>
 </template>

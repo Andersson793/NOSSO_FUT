@@ -1,7 +1,6 @@
 import axios from "axios";
 
-//configuração
-const APIKey = 'Bearer test_663571e967d0ad3de7f53890f6d87d'
+const APIKey  = import.meta.env.API_KEY || 'Bearer test_663571e967d0ad3de7f53890f6d87d';
 
 export const instance = axios.create({
     baseURL: 'https://api.api-futebol.com.br/v1',
