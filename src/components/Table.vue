@@ -1,8 +1,7 @@
 <script setup>
-import Error from '../Error.vue';
-import PreLoader from '../PreLoader.vue';
-import useGetAPI from '../../axios/axios.request.js';
-import Rodada from './Rodada.vue';
+import Error from "./Error.vue";
+import PreLoader from './PreLoader.vue';
+import useGetAPI from '../axios/axios.request.js';
 
 const {isReady,hasError,response} = useGetAPI('campeonatos/10/tabela','Tabela')
 
@@ -91,7 +90,6 @@ const td_bg  = "bg-neutral-100";
                             </tr>
                         </tbody>
                     </table>
-                    <Rodada/>
                 </div>
                 <Error v-else-if="hasError"/>
                 <PreLoader v-else :prop_width="800" :prop_height="1100"/>

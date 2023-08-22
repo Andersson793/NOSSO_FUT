@@ -10,7 +10,7 @@ const {nome} = storeToRefs(store)
 
 let isOpen = ref(false)
 
-const altOpen = () => isOpen.value = !isOpen.value;
+const altIsOpen = () => isOpen.value = !isOpen.value;
 
 </script>
 <template>
@@ -21,7 +21,7 @@ const altOpen = () => isOpen.value = !isOpen.value;
           {{nome}}
         </h1>
         <div class="cursor-pointer absolute right-8 hover:bg-gray-100/25 rounded-lg flex justify-center items-center p-1 hidden">
-          <img @click="altOpen" class="w-6 h-auto" src="../assets/seta-para-baixo.png" alt="V">
+          <img @click="altIsOpen" class="w-6 h-auto" src="../assets/seta-para-baixo.png" alt="V">
         </div>
       </div>
       <Select :isOpen="isOpen"></Select>

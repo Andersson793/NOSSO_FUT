@@ -1,6 +1,6 @@
 <script setup>
-import Artilharia  from "../sub_components/Artilharia.vue";
-import TitleSections from "../TitleSections.vue";
+import Artilharia  from "../components/Artilharia.vue";
+import TitleSections from "../components/TitleSections.vue";
 </script>
 <template>
     <TitleSections>
