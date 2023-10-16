@@ -1,10 +1,11 @@
 <script setup>
-import { defineProps } from 'vue';
+
 //define as propriedades de largura e altura
 const props = defineProps({
   prop_height: Number,
   prop_width: Number
 })
+
 </script>
 <template>
     <div 

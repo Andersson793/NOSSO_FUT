@@ -6,11 +6,11 @@ import TitleSections from './TitleSections.vue';
     <TitleSections>
         Apoiadores
     </TitleSections>
-    <div class="flex flex-col text-center">
+    <div class="flex flex-col text-center pb-28">
         <table class="text-sm w-fit m-auto text-neutral-500 mb-12">
             <tbody>
                 <tr>
-                    <td class="cursor-pointer px-5 py-2">Seu nome aqui.</td>
+                    <td class="cursor-pointer px-5 py-2">Logo da sua empresa aqui.</td>
                 </tr>
             </tbody>
         </table>

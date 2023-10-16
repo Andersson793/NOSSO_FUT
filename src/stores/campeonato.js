@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useStore = defineStore('campeonato',() =>{
-  const nome = ref("campeonato brasileiro")
-  const rodada  = ref(1)
+export const useStore = defineStore('campeonato',() => {
+  
+  const nome = ref(" ");
+  const rodada  = ref(1);
+  const camp_model = ref(10);
 
   function alterarNome(param) {
     nome.value = param
@@ -13,5 +15,9 @@ export const useStore = defineStore('campeonato',() =>{
     rodada.value = param
   }
 
-  return { nome, rodada, alterarNome, alterarRodada}
+  function alterarCamp(param) {
+    camp_model.value = Number(param)
+  }
+
+  return { nome, rodada, camp_model, alterarNome, alterarCamp}
 })

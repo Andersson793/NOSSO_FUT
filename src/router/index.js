@@ -1,21 +1,20 @@
-
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import ApoiadoresVue from '../components/Apoiadores.vue';
+import BrasileiraoVue from '@/pages/Brasileirao.vue';
+import TermoDeUsoVue from '@/pages/TermoDeUso.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      //component: 
+      name: 'Brasileirao',
+      component: BrasileiraoVue
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      //component: () => import('../views/AboutView.vue')
+      path: '/termo',
+      name: 'termo de uso',
+      component: TermoDeUsoVue
     }
   ]
 })
