@@ -19,7 +19,7 @@ import { RouterLink } from 'vue-router';
             <h3 class="mt-16 mb-6 text-lg font-bold">
                 Garantias e Responsabilidades
             </h3>
-            <p>O site e gratuitio e de código aberto e sua manutenção é feita por desenvolvedores independentes que doam um pouco do seu tempo e conhecimneto para o site, portanto não há quelquer garantia por parte dos desenvolvedores do site, portanto cabe ao usuário utilizar o site de forma responsável.</p>
+            <p>O site e gratuitio e de código aberto e sua manutenção é feita por desenvolvedores independentes que doam um pouco do seu tempo e conhecimneto para o site, portanto não há quelquer garantia por parte dos desenvolvedores do site, por isso cabe ao usuário utilizar o site de forma responsável.</p>
             <h3 class="mt-16 mb-6 text-lg font-bold">
                 Financiamento do site
             </h3>

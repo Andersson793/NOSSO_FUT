@@ -3,22 +3,14 @@ import TitleSections from './TitleSections.vue';
 </script>
 <template>
     <!--seção de apoiadores do site-->
-    <TitleSections>
-        Apoiadores
-    </TitleSections>
-    <div class="flex flex-col text-center pb-28">
-        <table class="text-sm w-fit m-auto text-neutral-500 mb-12">
-            <tbody>
-                <tr>
-                    <td class="cursor-pointer px-5 py-2">Logo da sua empresa aqui.</td>
-                </tr>
-            </tbody>
-        </table>
-        <small>
-            você tambem pode se tornar um apoiador.
-        </small>
-        <a class="m-auto text-orange-600 mt-5" href="https://apoia.se/nosso_fut">
-            <img class="h-6" src="../assets/apoia-se.png" alt="apoia-se">
-        </a> 
+    <div class="pb-28">
+        <p class="mb-12 mt-32 max-w-sm mx-auto text-center">
+            Ajude a manter este projeto ativo, considere se tornar um apoiador.
+        </p>
+        <div class="flex justify-center">
+            <a  href="https://apoia.se/nosso_fut">
+                <img class="h-auto w-32" src="../assets/apoia-se.png" alt="apoia-se">
+            </a> 
+        </div>
     </div>
 </template>

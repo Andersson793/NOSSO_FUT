@@ -4,7 +4,7 @@ import { ref } from 'vue'
 export const useStore = defineStore('campeonato',() => {
   
   const nome = ref(" ");
-  const rodada  = ref(1);
+  const rodada  = ref();
   const camp_model = ref(10);
 
   function alterarNome(param) {
@@ -19,5 +19,5 @@ export const useStore = defineStore('campeonato',() => {
     camp_model.value = Number(param)
   }
 
-  return { nome, rodada, camp_model, alterarNome, alterarCamp}
+  return { nome, rodada, camp_model, alterarNome, alterarCamp, alterarRodada}
 })

@@ -10,7 +10,7 @@ import { useStore } from "@/stores/campeonato.js";
 const store  = useStore();
 const {alterarNome, alterarCamp } = store;
 
-const { nome, camp_model } = storeToRefs(store);
+const { nome, camp_model, rodada } = storeToRefs(store);
 
 var s = ref(useGetAPI(`campeonatos/${camp_model.value}/tabela`));
 
@@ -33,10 +33,10 @@ watch(camp_model, () => {
     <section>
         <div class="flex justify-center px-1.5">
             <div class="max-w-full overflow-scroll">
-                <select class="bg-white px-2 py-1 border-2 mb-2 text-sm sm:text-base" :onchange="(e) => campeonato_idx = e.target.value" v-show="false" id="select" name="campeonatos">
-                    <option value="10">Série A</option>
-                    <option value="14">Série B</option>
-                </select>
+                <div class="mb-4">
+                    <span class="mb-2 text-gray-500 font-bold mr-8">Série A</span>
+                    <span class="mb-2 text-gray-500 font-bold">{{ rodada }}</span>
+                </div>
                 <div class="" v-if="s.isReady">
                     <table class="mr-5 text-sm sm:text-base whitespace-nowrap">
                         <thead class="border-t-2 border-gray-200">
@@ -61,31 +61,31 @@ watch(camp_model, () => {
                                 <td class="pr-8">
                                     {{ item.time.nome_popular }}
                                 </td>
-                                <td class="h-14 text-center bg-neutral-100 font-bold" title="Pontos">
+                                <td class="px-4 h-14 text-center bg-neutral-100 font-bold" title="Pontos">
                                     {{ item.pontos }}
                                 </td>
-                                <td class="h-14 text-center" title="Jogos">
+                                <td class="px-4 h-14 text-center" title="Jogos">
                                     {{ item.jogos }}
                                 </td>
-                                <td class="h-14 text-center bg-neutral-100" title="Vitórias">
+                                <td class="px-4 h-14 text-center bg-neutral-100" title="Vitórias">
                                     {{ item.vitorias }}
                                 </td>
-                                <td class="h-14 text-center hidden sm:table-cell" title="Empates">
+                                <td class="px-4 h-14 text-center hidden sm:table-cell" title="Empates">
                                     {{ item.empates }}
                                 </td>
-                                <td class="h-14 text-center bg-neutral-100 hidden sm:table-cell" title="Derrotas">
+                                <td class="px-4 h-14 text-center bg-neutral-100 hidden sm:table-cell" title="Derrotas">
                                     {{ item.derrotas }}
                                 </td>
-                                <td class="h-14 text-center hidden sm:table-cell" title="Gols pro">
+                                <td class="px-4 h-14 text-center hidden sm:table-cell" title="Gols pro">
                                     {{ item.gols_pro }}
                                 </td>
-                                <td class="h-14 text-center bg-neutral-100 hidden sm:table-cell" title="Gols contra">
+                                <td class="px-4 h-14 text-center bg-neutral-100 hidden sm:table-cell" title="Gols contra">
                                     {{ item.gols_contra }}
                                 </td>
-                                <td class="h-14 text-center" title="Saldo de gols">
+                                <td class="px-4 h-14 text-center" title="Saldo de gols">
                                     {{ item.saldo_gols }}
                                 </td>
-                                <td class="px-3 h-14 text-center bg-neutral-100" title="Aproveitamento">
+                                <td class="px-4 h-14 text-center bg-neutral-100" title="Aproveitamento">
                                     {{ item.aproveitamento.toFixed(0) }} %
                                 </td>
                                 <td class="h-14 text-center flex justify-center items-center" title="Útimos jogos">

@@ -1,0 +1,12 @@
+[build]
+
+    command = "yarn run build"
+
+[context.production]
+
+    API_KEY = ""
+
+[context.dev.environment]
+
+    NODE_ENV = "development"
+    VITE_API_KEY = "Bearer test_663571e967d0ad3de7f53890f6d87d"
