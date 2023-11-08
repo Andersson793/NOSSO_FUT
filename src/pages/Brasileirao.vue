@@ -20,6 +20,7 @@ watch(camp_model, () => {
 watch(b.value, () => {
     alterarNome(b.value.data.edicao_atual.nome_popular);
     alterarRodada(b.value.data.rodada_atual.nome);
+    console.log(b.value.data)
 })
 
 </script>
