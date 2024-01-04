@@ -7,7 +7,7 @@ import { useStore } from "@/stores/campeonato.js";
 import { ref, watch } from 'vue';
 
 const store  = useStore();
-const {rodada, alterarNome, alterarCamp , alterarRodada } = store;
+const {alterarNome , alterarRodada } = store;
 
 const { nome, camp_model } = storeToRefs(store);
 
@@ -18,9 +18,8 @@ watch(camp_model, () => {
 })
 
 watch(b.value, () => {
-    alterarNome(b.value.data.edicao_atual.nome_popular);
+   alterarNome(b.value.data.edicao_atual.nome_popular);
     alterarRodada(b.value.data.rodada_atual.nome);
-    console.log(b.value.data)
 })
 
 </script>

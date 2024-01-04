@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import ApoiadoresVue from '../components/Apoiadores.vue';
 import BrasileiraoVue from '@/pages/Brasileirao.vue';
 import TermoDeUsoVue from '@/pages/TermoDeUso.vue'
 
